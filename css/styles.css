@@ -18,17 +18,28 @@ h3 {
     margin: 0;
     color: #BD605C;
     font-family: 'Roboto Slab', serif;
+    font-weight: normal;    
+}
+
+h2 {
+    font-weight: bold;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18.5px;
     text-align: justify;
     margin-top: 5px;
     margin-bottom: 16px; 
 }
 
+#btn_activities {
+    cursor: pointer;
+}
+
 .overlay-green {
-    background-color: rgba(136, 189, 92, 0.5);
+    /*background-color: rgba(136, 189, 92, 0.85);*/
+    /*background-color: rgba(63, 132, 63, 0.5);*/
+    background-color: rgba(35, 73, 38, 0.55);
     height: 100%;
     width: 100%;
 }
@@ -36,11 +47,16 @@ p {
 .shadow-light {
     box-shadow: 0px 4px 15px #D6D6D6;
 }
-
     .shadow-dark {
         box-shadow: 0px 4px 15px #888888;
 ***REMOVED***
 
+.flip1 {
+    order: 1;
+}
+    .flip2 {
+        order: 2;
+***REMOVED***
 /* NAVBAR */
 #navbar {
     height: 64px;
@@ -53,6 +69,7 @@ p {
 
     #navbar header h1{
         margin: 0;
+        float: left;
         padding: 14px 20px;
         font-size: 28px;
         font-weight: normal;
@@ -98,10 +115,32 @@ p {
     background: no-repeat center url("http://cdn.history.com/sites/2/2015/04/hith-father-christmas-lights-iStock_000029514386Large.jpg");
     background-color: rgba(0, 0, 0, 0.1);
 }
+    #intro .box {
+        /*padding-top: calc(10%);*/
+        text-align: center;
+        text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+***REMOVED***
+
+    #intro .box:hover {
+        text-shadow: 3px 3px rgba(255, 255, 255, 0.5);
+***REMOVED***
+
+    #intro .box h1 {
+        color: white;
+        font-size: 20em;
+***REMOVED***
+
+    #intro .box h2 {
+        padding-top: 220px;
+        color: white;
+        font-weight: normal;
+        font-size: 72px;
+
+***REMOVED***
 
 /* CONTENT */
 .content {
-    max-width: 1080px;
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
@@ -116,7 +155,49 @@ footer {
     height: 40px;
 }
     footer span {
-        padding: 10px 10px;
-        float: right;
+        padding: 10px 0px;
         color: white;
 ***REMOVED***
+
+/* MEDIA */
+@media only screen and (max-width: 990px) {
+    #navbar header h1 {
+        font-size: 20px;
+        text-align: center;
+        float: none;
+        padding: 18px 0;
+***REMOVED***
+
+    #nav-desk {
+        display: none;
+***REMOVED***
+
+    .content img {
+        width:80%;
+        margin: 0 auto;
+        display: flex;
+***REMOVED***
+
+    #intro {
+        height: 400px;
+***REMOVED***
+
+        #intro .box h1 {
+            padding-top: 130px;
+            font-size: 120px;
+    ***REMOVED***
+
+        #intro .box h2 {
+            display: none;
+    ***REMOVED***
+    .flip {
+        display: flex;
+        flex-flow: column;    
+***REMOVED***
+    .flip1 {
+        order: 2;
+***REMOVED***
+    .flip2{
+        order: 1;
+***REMOVED***
+}
