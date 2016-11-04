@@ -21,9 +21,14 @@ h3 {
     font-weight: normal;    
 }
 
-h2 {
-    font-weight: bold;
-}
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+***REMOVED***
+
+    h2 {
+        font-size: 24px;
+***REMOVED***
 
 p {
     font-size: 18.5px;
@@ -32,31 +37,6 @@ p {
     margin-bottom: 16px; 
 }
 
-#btn_activities {
-    cursor: pointer;
-}
-
-.overlay-green {
-    /*background-color: rgba(136, 189, 92, 0.85);*/
-    /*background-color: rgba(63, 132, 63, 0.5);*/
-    background-color: rgba(35, 73, 38, 0.55);
-    height: 100%;
-    width: 100%;
-}
-
-.shadow-light {
-    box-shadow: 0px 4px 15px #D6D6D6;
-}
-    .shadow-dark {
-        box-shadow: 0px 4px 15px #888888;
-***REMOVED***
-
-.flip1 {
-    order: 1;
-}
-    .flip2 {
-        order: 2;
-***REMOVED***
 /* NAVBAR */
 #navbar {
     height: 64px;
@@ -102,6 +82,7 @@ p {
         font-size: 15px;
         letter-spacing: 1.5px;
         text-transform: uppercase;
+        cursor: pointer;
 ***REMOVED***
 
     #navbar ul li a:hover {
@@ -111,23 +92,32 @@ p {
 /* HEAD CONTENT */
 #intro {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 64px);
+    padding-top: 64px;
     background: no-repeat center url("http://cdn.history.com/sites/2/2015/04/hith-father-christmas-lights-iStock_000029514386Large.jpg");
     background-color: rgba(0, 0, 0, 0.1);
 }
     #intro .box {
-        /*padding-top: calc(10%);*/
+        /*text-shadow: 3px 3px rgba(0, 0, 0, 0.5);*/
         text-align: center;
-        text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+        background-color: rgba(35, 73, 38, 0.55);
+        height: 100%;
+        width: 100%;
 ***REMOVED***
 
-    #intro .box:hover {
-        text-shadow: 3px 3px rgba(255, 255, 255, 0.5);
+    #intro .box .mdl-card {
+        top: 10%;
+        bottom: 10%;
+        width: 80%;
+        height: 80%;
+        vertical-align: middle;
+        display: inline-block;
 ***REMOVED***
 
     #intro .box h1 {
-        color: white;
-        font-size: 20em;
+        top: 20%;
+        font-size: 5em;
+        bottom:20%;
 ***REMOVED***
 
     #intro .box h2 {
@@ -153,11 +143,37 @@ p {
 footer {
     background-color: #AD4642;
     height: 40px;
+    bottom: 0;
 }
     footer span {
         padding: 10px 0px;
         color: white;
 ***REMOVED***
+
+
+/* CLASSES */
+.overlay-green {
+    /*background-color: rgba(136, 189, 92, 0.85);*/
+    /*background-color: rgba(63, 132, 63, 0.5);*/
+    background-color: rgba(35, 73, 38, 0.55);
+    height: 100%;
+    width: 100%;
+}
+
+.shadow-light {
+    box-shadow: 0px 4px 15px #D6D6D6;
+}
+    .shadow-dark {
+        box-shadow: 0px 4px 15px #3a3b3d;
+***REMOVED***
+
+.flip1 {
+    order: 1;
+}
+    .flip2 {
+        order: 2;
+***REMOVED***
+
 
 /* MEDIA */
 @media only screen and (max-width: 990px) {
@@ -200,4 +216,21 @@ footer {
     .flip2{
         order: 1;
 ***REMOVED***
+}
+
+
+
+
+
+.thing {
+    
+    top: 100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.thing .mdl-card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
