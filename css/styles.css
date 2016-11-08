@@ -47,7 +47,7 @@ p {
     z-index: 10;
 }
 
-    #navbar header h1{
+    #navbar h1{
         margin: 0;
         float: left;
         padding: 14px 20px;
@@ -56,7 +56,7 @@ p {
         text-decoration: none;
 ***REMOVED***
 
-    #navbar header h1 a {
+    #navbar h1 a {
         text-decoration: none;
         color: white;
 ***REMOVED***
@@ -89,23 +89,32 @@ p {
         background-color: rgba(0, 0, 0, 0.1);
 ***REMOVED***
 
-/* HEAD CONTENT */
-#intro {
+#nav-mobile {
+    margin-top: -42px;
+    padding: 0 15px;
+    display: none;
+}
+
+    #nav-mobile .material-icons{
+        color: white;
+        color: rgba(255, 255, 255, 1); 
+***REMOVED***
+
+/* HEADER */
+header {
     width: 100%;
     height: calc(100% - 64px);
     padding-top: 64px;
     background: no-repeat center url("http://cdn.history.com/sites/2/2015/04/hith-father-christmas-lights-iStock_000029514386Large.jpg");
-    background-color: rgba(0, 0, 0, 0.1);
 }
-    #intro .box {
-        /*text-shadow: 3px 3px rgba(0, 0, 0, 0.5);*/
+    header .box {
         text-align: center;
         background-color: rgba(35, 73, 38, 0.55);
         height: 100%;
         width: 100%;
 ***REMOVED***
 
-    #intro .box .mdl-card {
+    header .box .mdl-card {
         top: 10%;
         bottom: 10%;
         width: 80%;
@@ -114,28 +123,40 @@ p {
         display: inline-block;
 ***REMOVED***
 
-    #intro .box h1 {
+    header .box h1 {
         top: 20%;
-        font-size: 5em;
+        font-size: 6em;
         bottom:20%;
+        color: white;
 ***REMOVED***
 
-    #intro .box h2 {
+    header .box h2 {
         padding-top: 220px;
         color: white;
         font-weight: normal;
         font-size: 72px;
-
 ***REMOVED***
 
-/* CONTENT */
-.content {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
+    header .box h3 {
+        color: white;
+***REMOVED***
+
+/* HIGHLIGHT */
+#highlight {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
-    .content img {
+
+    #highlight .mdl-card {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 0px 15px #CACFD9;
+***REMOVED***
+
+    #highlight .mdl-card img {
+        box-shadow: 1px 1px 15px #8C9496;
         width:100%;
 ***REMOVED***
 
@@ -152,32 +173,63 @@ footer {
 
 
 /* CLASSES */
+.content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
 .overlay-green {
-    /*background-color: rgba(136, 189, 92, 0.85);*/
-    /*background-color: rgba(63, 132, 63, 0.5);*/
     background-color: rgba(35, 73, 38, 0.55);
     height: 100%;
     width: 100%;
 }
 
-.shadow-light {
-    box-shadow: 0px 4px 15px #D6D6D6;
+.shadow {
+    box-shadow: 0px 4px 15px #3a3b3d;
 }
-    .shadow-dark {
-        box-shadow: 0px 4px 15px #3a3b3d;
-***REMOVED***
 
 .flip1 {
     order: 1;
 }
+
+
     .flip2 {
         order: 2;
 ***REMOVED***
 
 
 /* MEDIA */
+@media only screen and (min-height: 900px) {
+    header .box h2 {
+        padding-top: 300px;
+***REMOVED***
+}
+
+@media only screen and (max-height: 600px) {
+    header .box h2 {
+        padding-top: 130px;
+***REMOVED***
+}
+
+@media only screen and (max-width: 1400px) {
+    p {
+        font-size: 16px;
+***REMOVED***
+}
+
+@media only screen and (max-width: 1250px) {
+    p {
+        font-size: 15px;
+***REMOVED***
+    #highlight .mdl-card {
+        min-width: 100%;
+***REMOVED***
+}
+
 @media only screen and (max-width: 990px) {
-    #navbar header h1 {
+    #navbar h1 {
         font-size: 20px;
         text-align: center;
         float: none;
@@ -188,24 +240,29 @@ footer {
         display: none;
 ***REMOVED***
 
+    #nav-mobile {
+        display: block;
+***REMOVED***
+
     .content img {
         width:80%;
         margin: 0 auto;
         display: flex;
 ***REMOVED***
 
-    #intro {
+    header {
         height: 400px;
 ***REMOVED***
 
-        #intro .box h1 {
-            padding-top: 130px;
+        header .box h1 {
+            padding-top: 60px;
             font-size: 120px;
     ***REMOVED***
 
-        #intro .box h2 {
+        header .box h2 {
             display: none;
     ***REMOVED***
+
     .flip {
         display: flex;
         flex-flow: column;    
@@ -213,24 +270,33 @@ footer {
     .flip1 {
         order: 2;
 ***REMOVED***
-    .flip2{
-        order: 1;
+        .flip2{
+            order: 1;
+    ***REMOVED***
+}
+
+@media only screen and (max-width: 720px) {
+    #dialog {
+        padding: 0 15px;
+***REMOVED***
+
+    #dialog .mdl-dialog {
+        min-width:100%;
 ***REMOVED***
 }
 
-
-
-
-
-.thing {
-    
-    top: 100px;
-    margin: 0 auto;
-    width: 100%;
+#dialog .mdl-dialog {
+    background-color: white;
+    margin: 50px auto 0 auto;
+    width:80%;
 }
 
-.thing .mdl-card {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+.fade {
+    animation-name: example;
+    animation-duration: 0.5s;
+}
+
+@keyframes example {
+    from {margin-top: -100px;}
+    to {margin-top: 0;}
 }
