@@ -11,10 +11,14 @@ section,
 article {
     margin-bottom: 40px;
 }
+    section.modal {
+        margin-bottom: 0;
+***REMOVED***
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     margin: 0;
     color: #BD605C;
     font-family: 'Roboto Slab', serif;
@@ -61,7 +65,8 @@ p {
         color: white;
 ***REMOVED***
 
-    #navbar ul {
+    #navbar ul,
+    #nav-mobile-menu ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -85,7 +90,8 @@ p {
         cursor: pointer;
 ***REMOVED***
 
-    #navbar ul li a:hover {
+    #navbar ul li a:hover,
+    #nav-mobile-menu ul li a:hover {
         background-color: rgba(0, 0, 0, 0.1);
 ***REMOVED***
 
@@ -95,10 +101,54 @@ p {
     display: none;
 }
 
-    #nav-mobile .material-icons{
-        color: white;
+    #nav-mobile a,
+    #nav-mobile .material-icons,
+    #nav-mobile-menu .material-icons a {
         color: rgba(255, 255, 255, 1); 
+        text-decoration: none;
 ***REMOVED***
+
+    #nav-mobile-menu .mdl-dialog {
+        background-color: #BD605C;
+        width: 56dp;
+        /*width: 320px;*/
+        max-width: 100%;
+        height: 100%;
+***REMOVED***
+        #nav-mobile-menu h4 a{
+            padding-top: 20px;
+            text-decoration: none;
+            color: white;
+    ***REMOVED***
+
+        #nav-mobile-menu .material-icons {
+            margin: -95px 20px 0 0;
+            float: right;
+            font-size: 24px;
+    ***REMOVED***
+
+        #nav-mobile-menu.fade {
+            animation-name: fadeleft;
+            animation-duration: 0.5s;
+    ***REMOVED***
+
+        #nav-mobile-menu .mdl-dialog__content {
+            padding: 20px 0 24px 0;
+    ***REMOVED***
+
+        #nav-mobile-menu ul li a {
+            display: inline-block;
+            color: white;
+            vertical-align: middle;
+            width: calc(100% - 24px);
+            padding: 22px 0 22px 24px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 24px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+    ***REMOVED***
 
 /* HEADER */
 header {
@@ -133,8 +183,8 @@ header {
     header .box h2 {
         padding-top: 220px;
         color: white;
-        font-weight: normal;
-        font-size: 72px;
+        font-weight: bold;
+        font-size: 92px;
 ***REMOVED***
 
     header .box h3 {
@@ -275,28 +325,53 @@ footer {
     ***REMOVED***
 }
 
-@media only screen and (max-width: 720px) {
-    #dialog {
+@media only screen and (max-width: 650px) {
+    #register,
+    #login {
         padding: 0 15px;
 ***REMOVED***
 
-    #dialog .mdl-dialog {
+    #register .mdl-dialog,
+    #login .mdl-dialog {
         min-width:100%;
+***REMOVED***
+
+    .mdl-switch {
+        margin-bottom: 0;
 ***REMOVED***
 }
 
-#dialog .mdl-dialog {
+#register .mdl-dialog,
+#login .mdl-dialog {
     background-color: white;
-    margin: 50px auto 0 auto;
+    margin: 80px auto 0 auto;
     width:80%;
+    max-width: 650px;
+}
+
+
+
+
+.mdl-textfield {
+    width: 100%;
 }
 
 .fade {
-    animation-name: example;
+    animation-name: fadedown;
     animation-duration: 0.5s;
 }
 
-@keyframes example {
+@keyframes fadedown {
     from {margin-top: -100px;}
     to {margin-top: 0;}
+}
+
+@keyframes fadeleft {
+    from {margin-left: -100px;}
+    to {margin-left: 0;}
+}
+
+@keyframes faderight {
+    from {margin-left: 100px;}
+    to {margin-left: 0;}
 }
