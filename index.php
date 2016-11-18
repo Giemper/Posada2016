@@ -1,19 +1,23 @@
+***REMOVED***
+    session_start();
+***REMOVED***
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Posada Discípulos 2016</title>
+    <title>Posada Discípulos 2016</title>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.light_green-red.min.css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.light_green-red.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-        <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </head>
+
 <body>
     <nav id="navbar" class="shadow">
         <div class="content">
@@ -23,7 +27,7 @@
                 <li><a id="btn_register" data-toggle="modal" data-target="#register">Registro</a></li>
                 <li><a class="btn_activities">Actividades</a></li>
                 <li><a class="btn_home">Home</a></li>
-            </ul>    
+            </ul>
         </div>
         <div id="nav-mobile">
             <i class="material-icons" style="float: left">
@@ -36,21 +40,25 @@
     </nav>
 
     <header id="intro" class="shadow">
-            <div class="box">
-                    <h2>Posada Discipulos</h2>
-                    <h1>2016</h1>
-                    <h3>Diciembre 30</h3>
-            </div>
+        <div class="box">
+            <h2>Posada Discipulos</h2>
+            <h1>2016</h1>
+            <h3>Diciembre 30</h3>
+        </div>
     </header>
 
     <main id="highlight">
         <div class="mdl-card">
-            <article  class="content">
+            <article class="content">
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
                         <h1>Ho Ho Ho</h1>
-                        <p>Oh la navidad. Una vez más llegamos a ese punto del año donde nos juntamos con nuestros seres queridos y tomamos chocolate caliente junto a la orilla de una chimenea imaginaria.</p>
-                        <p>Con esta hermosa época del año llega la ya clásica <b>Posada Discípulos</b>, la gran fiesta anual donde cada ocasión se vuelve más especial al unir un grupo de personas que aunque ya no viven en las mismas ciudades, se reúnen para celebrar las cosas importantes en la vida: amistad, tolerancia, y <b>José</b>.</p>
+                        <p>Oh la navidad. Una vez más llegamos a ese punto del año donde nos juntamos con nuestros seres queridos
+                            y tomamos chocolate caliente junto a la orilla de una chimenea imaginaria.</p>
+                        <p>Con esta hermosa época del año llega la ya clásica <b>Posada Discípulos</b>, la gran fiesta anual
+                            donde cada ocasión se vuelve más especial al unir un grupo de personas que aunque ya no viven
+                            en las mismas ciudades, se reúnen para celebrar las cosas importantes en la vida: amistad, tolerancia,
+                            y <b>José</b>.</p>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
                         <img src="img/screen_3.jpg">
@@ -65,8 +73,14 @@
                     </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone flip2">
                         <h1>El Gran Intercambio</h1>
-                        <p>¿Alguna vez has sentido el espíritu navideño entrar dentro de tu ser mientras absorbe toda tu voluntad, forzándote a entrar a un perpetuo estado de paz y bondad que te invita a actuar desinteresadamente a dar lo mejor de ti hacia el resto del mundo para alcanzar éxtasis total? Si la respuesta es sí, por favor consulta a tu psicólogo, nos preocupas.</p>
-                        <p>Al igual que años pasados, la posada trae consigo el gran intercambio. La actividad consiste en ser el <b>santa</b> encontrar el mejor regalo que le puedas dar a una persona determinada dentro de la posada. Para hacer todo más sencillo, nosotros te ayudaremos dándote información sobre tu <b>giftee</b>.  ¿La mejor parte? ¡Tú también recibes un regalo!</p>
+                        <p>¿Alguna vez has sentido el espíritu navideño entrar dentro de tu ser mientras absorbe toda tu voluntad,
+                            forzándote a entrar a un perpetuo estado de paz y bondad que te invita a actuar desinteresadamente
+                            a dar lo mejor de ti hacia el resto del mundo para alcanzar éxtasis total? Si la respuesta es
+                            sí, por favor consulta a tu psicólogo, nos preocupas.</p>
+                        <p>Al igual que años pasados, la posada trae consigo el gran intercambio. La actividad consiste en ser
+                            el <b>santa</b> encontrar el mejor regalo que le puedas dar a una persona determinada dentro
+                            de la posada. Para hacer todo más sencillo, nosotros te ayudaremos dándote información sobre
+                            tu <b>giftee</b>. ¿La mejor parte? ¡Tú también recibes un regalo!</p>
                     </div>
                 </div>
             </article>
@@ -75,8 +89,12 @@
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
                         <h1>Confía en el Corazón de las Cartas</h1>
-                        <p>Comprendemos que no todos pueden o quieren participar en el intercambio. No hay problema, no juzgamos (mucho). Sin embargo, siempre queremos encontrar una manera en la que todos puedan participar de una u otra manera.</p>
-                        <p>Es por eso que en esta posada haremos un segundo pequeño intercambio, algo más breve pero bonito. Introduciendo el Intercambio de Cartas. La intención es participar con algo simple, dándoles un pequeño gran mensaje a nuestros amigos. Y al igual que la navidad, ¡todos participan!</p>
+                        <p>Comprendemos que no todos pueden o quieren participar en el intercambio. No hay problema, no juzgamos
+                            (mucho). Sin embargo, siempre queremos encontrar una manera en la que todos puedan participar
+                            de una u otra manera.</p>
+                        <p>Es por eso que en esta posada haremos un segundo pequeño intercambio, algo más breve pero bonito.
+                            Introduciendo el Intercambio de Cartas. La intención es participar con algo simple, dándoles
+                            un pequeño gran mensaje a nuestros amigos. Y al igual que la navidad, ¡todos participan!</p>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
                         <img src="img/screen_1.jpg">
@@ -88,19 +106,23 @@
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
                         <h2>XOXO. Tu Santa</h2>
-                        <p>Al participar en cualquiera de los dos intercambios, podrás mandarle mensajes anónimos a tu giftee previo a la posada para aclaran cualquier duda, o para volverlo loco con correos subliminales.</p>
+                        <p>Al participar en cualquiera de los dos intercambios, podrás mandarle mensajes anónimos a tu giftee
+                            previo a la posada para aclaran cualquier duda, o para volverlo loco con correos subliminales.</p>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
                         <h2>El Año de las Elecciones</h2>
-                        <p>Los Discípulos Awards regresan más grandes que nunca. Este año para galardonar a nuestros amigos más tremendos. Tendremos nuevas categorías que prometerán dar un mayor reflejo de nuestras virtudes. ¿Quiénes se llevaran a casa al José de Oro?</p>
+                        <p>Los Discípulos Awards regresan más grandes que nunca. Este año para galardonar a nuestros amigos
+                            más tremendos. Tendremos nuevas categorías que prometerán dar un mayor reflejo de nuestras virtudes.
+                            ¿Quiénes se llevaran a casa al José de Oro?</p>
                     </div>
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
                         <h2>Pascua en Navidad</h2>
-                        <p>Como siempre, ten los ojos abiertos a los Easter Eggs que aparecerán a través de la página. Prometemos adornar tu navegador con fotos de Héctor.</p>
+                        <p>Como siempre, ten los ojos abiertos a los Easter Eggs que aparecerán a través de la página. Prometemos
+                            adornar tu navegador con fotos de Héctor.</p>
                     </div>
                 </div>
             </article>
-        </div>    
+        </div>
     </main>
 
     <footer>
@@ -121,45 +143,45 @@
 
                     <h3 style="font-size: 20px">Crea tu Usuario</h3>
 
-                    <form action="#" style="display: inline-table; width: 100%">
+                    <form id="form-register" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post" style="display: inline-table; width: 100%">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="register_user">
-                            <label class="mdl-textfield__label" for="register_user">Ingresa Usuario</label>
+                            <input class="mdl-textfield__input" type="text" name="reg_user">
+                            <label class="mdl-textfield__label" for="reg_user">Ingresa Usuario</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:50%">
-                            <input class="mdl-textfield__input" type="password" id="register_pass">
-                            <label class="mdl-textfield__label" for="register_pass">Ingresa Contraseña</label>
+                            <input class="mdl-textfield__input" type="password" name="reg_pass">
+                            <label class="mdl-textfield__label" for="reg_pass">Ingresa Contraseña</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:50%">
-                            <input class="mdl-textfield__input" type="password" id="register_pass_2">
-                            <label class="mdl-textfield__label" for="register_pass_2">Confirma Contraseña</label>
+                            <input class="mdl-textfield__input" type="password" name="reg_pass_2">
+                            <label class="mdl-textfield__label" for="reg_pass_2">Confirma Contraseña</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="register_firstname">
-                            <label class="mdl-textfield__label" for="register_firstname">Ingresa Tus Nombres</label>
+                            <input class="mdl-textfield__input" type="text" name="reg_first">
+                            <label class="mdl-textfield__label" for="reg_first">Ingresa Tus Nombres</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="register_lastname">
-                            <label class="mdl-textfield__label" for="register_last">Ingresa Tus Apellidos</label>
+                            <input class="mdl-textfield__input" type="text" name="reg_last">
+                            <label class="mdl-textfield__label" for="reg_last">Ingresa Tus Apellidos</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="email" id="register_email">
-                            <label class="mdl-textfield__label" for="register_email">Ingresa Tu Email</label>
+                            <input class="mdl-textfield__input" type="email" name="reg_email">
+                            <label class="mdl-textfield__label" for="reg_email">Ingresa Tu Email</label>
                         </div>
                     </form>
 
                     <br><br>
 
                     <h3 style="font-size: 20px">Platica sobre ti</h3>
-                    
+
                     <form action="#" style="display: inline-table; width: 100%">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="register_question_1">
-                            <label class="mdl-textfield__label" for="register_question_1">Hillary o Trump</label>
+                            <input class="mdl-textfield__input" type="text" name="reg_question_1">
+                            <label class="mdl-textfield__label" for="reg_question_1">Hillary o Trump</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="register_question_1">
-                            <label class="mdl-textfield__label" for="register_question_1">MAKE AMERICA GREAT AGAIN</label>
+                            <input class="mdl-textfield__input" type="text" name="reg_question_1">
+                            <label class="mdl-textfield__label" for="reg_question_1">MAKE AMERICA GREAT AGAIN</label>
                         </div>
                     </form>
 
@@ -170,35 +192,35 @@
                 </div>
 
                 <div class="mdl-dialog__actions">
-                    <button type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>
-                </div>    
+                    <button id="submit-register" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="login" class="modal fade" role="dialog">
-        <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto">
+        <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto;">
             <div style="padding: 0 50px 25px 50px">
                 <h1 class="mdl-dialog__title">Login</h1>
 
                 <div class="mdl-dialog__content">
-                    <form action="#">
+                    <form id="form-login" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="login_user">
-                            <label class="mdl-textfield__label" for="login_user">Usuario</label>
+                            <input class="mdl-textfield__input" type="text" name="log_user">
+                            <label class="mdl-textfield__label" for="log_user">Usuario</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="password" id="login_pass">
-                            <label class="mdl-textfield__label" for="login_pass">Password</label>
+                            <input class="mdl-textfield__input" type="password" name="log_pass">
+                            <label class="mdl-textfield__label" for="log_pass">Password</label>
                         </div>
                     </form>
                 </div>
 
                 <div class="mdl-dialog__actions">
-                    <button type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>
+                    <button id="submit-login" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -217,7 +239,7 @@
                         <li><a class="btn_activities" data-dismiss="modal">Actividades</a></li>
                         <li><a id="btn_register" data-dismiss="modal" data-toggle="modal" data-target="#register">Registro</a></li>
                         <li><a id="btn_register" data-dismiss="modal" data-toggle="modal" data-target="#login"><b>Login</b></a></li>
-                    </ul> 
+                    </ul>
                 </div>
             </div>
         </div>
@@ -225,18 +247,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(".btn_home").click(function() {
-            $('html,body').animate({
-                scrollTop: $("#intro").offset().top},
-                'slow');
-    ***REMOVED***);
-
-        $(".btn_activities").click(function() {
-            $('html,body').animate({
-                scrollTop: $("#highlight").offset().top - 80},
-                'slow');
-    ***REMOVED***);
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

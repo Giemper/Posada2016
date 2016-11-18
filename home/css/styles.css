@@ -1,0 +1,137 @@
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f3f7f2;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+section,
+article {
+    margin-bottom: 40px;
+}
+    section.modal {
+        margin-bottom: 0;
+***REMOVED***
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    color: #BD605C;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;    
+}
+
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+***REMOVED***
+
+    h2 {
+        font-size: 24px;
+***REMOVED***
+
+p {
+    font-size: 18.5px;
+    text-align: justify;
+    margin-top: 5px;
+    margin-bottom: 16px; 
+}
+
+/* NAVBAR */
+#navbar {
+    height: 64px;
+    margin-left: 64px;
+    background-color: #BD605C;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+    #navbar h1{
+        margin: 0;
+        float: left;
+        padding: 14px 20px;
+        font-size: 28px;
+        font-weight: normal;
+        text-decoration: none;
+***REMOVED***
+
+    #navbar h1 a {
+        text-decoration: none;
+        color: #FFF;
+***REMOVED***
+
+    #navbar ul,
+    #nav-mobile-menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+***REMOVED***
+
+    #navbar ul li {
+        float: right; 
+***REMOVED***
+
+/* SIDEBAR */
+#sidebar {
+    width: 72px;
+    /*background-color: #77A867;*/
+    /*background-color: #5C2321;*/
+    background-color: #335052;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+}
+
+    #sidebar-menu ul,
+    #sidebar-top i,
+    #sidebar-bottom i {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+***REMOVED***
+
+    #sidebar-menu ul li a,
+    #sidebar-top i a,
+    #sidebar-bottom i a {
+        display: inline-block;
+        color: white;
+        vertical-align: middle;
+        width: 100%;
+        padding: 17px 0 16px 20px;
+        font-size: 32px;
+        text-decoration: none;
+        cursor: pointer;
+***REMOVED***
+
+    #sidebar-menu ul li a:hover,
+    #sidebar-bottom ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+***REMOVED***
+
+    #sidebar-top i a {
+        background-color: #284142;
+***REMOVED***
+
+    #sidebar-bottom {
+        bottom: 0;
+***REMOVED***
+
+/* CLASSES */
+.content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.shadow {
+    box-shadow: 0px 4px 15px #3a3b3d;
+}

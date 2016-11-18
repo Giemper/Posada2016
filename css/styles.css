@@ -348,6 +348,9 @@ footer {
     width:80%;
     max-width: 650px;
 }
+    #login .mdl-dialog {
+        max-width: 450px;
+***REMOVED***
 
 
 
