@@ -38,7 +38,7 @@ p {
     font-size: 18.5px;
     text-align: justify;
     margin-top: 5px;
-    margin-bottom: 16px; 
+    margin-bottom: 16px;
 }
 
 /* NAVBAR */
@@ -77,11 +77,22 @@ p {
         float: right; 
 ***REMOVED***
 
+    #nav-mobile {
+        margin-top: -42px;
+        padding: 0 15px;
+        display: none;
+***REMOVED***
+
+        #nav-mobile a,
+        #nav-mobile .material-icons,
+        #nav-mobile-menu .material-icons a {
+            color: rgba(255, 255, 255, 1); 
+            text-decoration: none;
+    ***REMOVED***
+
 /* SIDEBAR */
 #sidebar {
     width: 72px;
-    /*background-color: #77A867;*/
-    /*background-color: #5C2321;*/
     background-color: #335052;
     position: fixed;
     top: 0;
@@ -116,12 +127,76 @@ p {
         background-color: rgba(0, 0, 0, 0.1);
 ***REMOVED***
 
+    #sidebar-menu ul li a.disable {
+        color: #71888A;
+        cursor: default;
+***REMOVED***
+
+    #sidebar-menu ul li a.disable:hover {
+        background-color: rgba(0, 0, 0, 0);
+***REMOVED***
+
     #sidebar-top i a {
         background-color: #284142;
 ***REMOVED***
 
     #sidebar-bottom {
         bottom: 0;
+        position: fixed;
+***REMOVED***
+
+/* DIRECTIVE CARDS */
+#directive-cards {
+    padding-top: 90px;
+    margin-left: 72px;
+}
+    #directive-cards h1 {
+        font-weight: normal;
+        margin-bottom: 10px;
+***REMOVED***
+
+    #directive-cards .mdl-card {
+        box-shadow: 0px 0px 15px #CACFD9;
+        width: 90%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+***REMOVED***
+
+    #directive-cards .mdl-card__title {
+        color: #fff;
+        height: 176px;
+***REMOVED***
+
+    #directive-cards .mdl-card__title-text {
+        font-weight: bold;
+        font-size: 35px;
+***REMOVED***
+
+    #directive-cards .mdl-card__supporting-text {
+        color: rgba(0, 0, 0, 0.87);
+        width: 90%;
+        margin: 20px auto;
+        padding: 0;
+***REMOVED***
+
+    #directive-cards .header-title {
+        background-color: rgba(35, 73, 38, 0.55);
+        margin-top: -176px;
+***REMOVED***
+
+    #directive-cards .header-1 {
+        background: url('https://stormideaswus.blob.core.windows.net/headerjunction/2014/91/6d2380c6-00e3-4f58-a911-c8aa98afa460.jpg') center / cover;
+***REMOVED***
+
+    #directive-cards .header-2 {
+        background: url('https://stormideaswus.blob.core.windows.net/headerjunction/2014/91/ebf307a3-5c95-42be-9301-2be499d3a110.jpg') center / cover;
+***REMOVED***
+
+    #directive-cards .header-5 {
+        background: url('https://www.drupal.org/files/issues/header_1.png') center / cover;
 ***REMOVED***
 
 /* CLASSES */
@@ -134,4 +209,54 @@ p {
 
 .shadow {
     box-shadow: 0px 4px 15px #3a3b3d;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 1250px) {
+    p {
+        font-size: 16px;
+***REMOVED***
+}
+
+@media only screen and (max-width: 750px) {
+    #navbar,
+    #directive-cards {
+        margin-left: 0;
+***REMOVED***
+
+    #navbar h1 {
+        font-size: 20px;
+        text-align: center;
+        float: none;
+        padding: 18px 0;
+***REMOVED***
+    
+    #nav-mobile {
+        display: block;
+***REMOVED***
+
+    #sidebar {
+        display: none;
+***REMOVED***
+}
+
+#logout .mdl-dialog {
+    background-color: white;
+    margin: 80px auto 0 auto;
+    width:80%;
+    max-width: 650px;
+}
+    #logout .mdl-dialog {
+        max-width: 450px;
+***REMOVED***
+
+.fade {
+    animation-name: fadedown;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadedown {
+    from {margin-top: -100px;}
+    to {margin-top: 0;}
 }

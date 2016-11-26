@@ -352,7 +352,10 @@ footer {
         max-width: 450px;
 ***REMOVED***
 
-
+#register .mdl-dialog__content,
+#login .mdl-dialog__content {
+    color: rgba(0,0,0,.87);
+}
 
 
 .mdl-textfield {

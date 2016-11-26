@@ -1,5 +1,9 @@
 ***REMOVED***
     session_start();
+
+    if(isset($_SESSION['user_id']) != "") {
+        header("Location: http://posada.giemper.com/home");
+***REMOVED***
 ***REMOVED***
 <!DOCTYPE html>
 <html>
@@ -132,7 +136,7 @@
         </div>
     </footer>
 
-    <section id="register" class="modal fade" role="dialog">
+    <section id="register" class="modal fade" role="dialog" style="padding-bottom: 30px">
         <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto">
 
             <div style="padding: 0 50px 25px 50px">
@@ -168,27 +172,51 @@
                             <input class="mdl-textfield__input" type="email" name="reg_email">
                             <label class="mdl-textfield__label" for="reg_email">Ingresa Tu Email</label>
                         </div>
-                    </form>
 
-                    <br><br>
+                        <br><br>
 
-                    <h3 style="font-size: 20px">Platica sobre ti</h3>
-
-                    <form action="#" style="display: inline-table; width: 100%">
+                        <h3 style="font-size: 20px">Questionario Navideño</h3>
+                        <p>Una vez registrado podras modificar <b>casi</b> todos tus respuestas las veces que quieras.</p>
+                        <br>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" name="reg_question_1">
-                            <label class="mdl-textfield__label" for="reg_question_1">Hillary o Trump</label>
+                            <label class="mdl-textfield__label" for="reg_question_1">Platicame de ti</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="reg_question_1">
-                            <label class="mdl-textfield__label" for="reg_question_1">MAKE AMERICA GREAT AGAIN</label>
+                            <input class="mdl-textfield__input" type="text" name="reg_question_2">
+                            <label class="mdl-textfield__label" for="reg_question_2">¿Que es lo que te disgusta?</label>
                         </div>
-                    </form>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="reg_question_3">
+                            <label class="mdl-textfield__label" for="reg_question_3">Series Favoritas</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="reg_question_4">
+                            <label class="mdl-textfield__label" for="reg_question_4">Peliculas Favoritas</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="reg_question_5">
+                            <label class="mdl-textfield__label" for="reg_question_5">Equipos Favoritos</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="reg_question_6">
+                            <label class="mdl-textfield__label" for="reg_question_6">Musica Favorita</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="reg_question_7">
+                            <label class="mdl-textfield__label" for="reg_question_7">¿Cual ha sido un buen recuerdo Navideño para ti?</label>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" name="reg_question_8">
+                            <label class="mdl-textfield__label" for="reg_question_8">Si Fueras un <b>Meme</b>, ¿Cual serias?</label>
+                        </div>
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="inter_switch">
+                            <input type="checkbox" id="inter_switch" name="inter_switch" class="mdl-switch__input" checked>
+                            <span class="mdl-switch__label">Quiero participar en el <b>Intercambio de Regalos</b>.</span>
+                        </label>
 
-                    <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="inter_switch">
-                            <input type="checkbox" id="inter_switch" class="mdl-switch__input" checked>
-                            <span class="mdl-switch__label">Quiero participar en el <b>intercambio de regalos</b>.</span>
-                    </label>
+                        
+                    </form>
                 </div>
 
                 <div class="mdl-dialog__actions">
@@ -206,14 +234,15 @@
                 <div class="mdl-dialog__content">
                     <form id="form-login" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" name="log_user">
+                            <input class="mdl-textfield__input input-login" type="text" name="log_user" id="log_user">
                             <label class="mdl-textfield__label" for="log_user">Usuario</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="password" name="log_pass">
+                            <input class="mdl-textfield__input input-login" type="password" name="log_pass" id="log_pass">
                             <label class="mdl-textfield__label" for="log_pass">Password</label>
                         </div>
                     </form>
+                    <p id="error-login" style="color: red"></p>
                 </div>
 
                 <div class="mdl-dialog__actions">

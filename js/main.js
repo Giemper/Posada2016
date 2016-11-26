@@ -25,16 +25,35 @@ $("#submit-register").click(function () {
 });
 
 $("#submit-login").click(function () {
-    var data = $("#form-login").serialize();
-
-    $.ajax({
-        data: data,
-        type: "post",
-        url: "/php/login.php",
-        success: function (data) {
-            console.log(data);
-            console.log("Login AJAX worked.");
-            window.location.href = "/home/";
-    ***REMOVED***
-***REMOVED***);
+    Login();
 });
+
+$(".input-login").keypress(function (key) {
+    if(key.which == 13) {
+        Login();
+***REMOVED***
+});
+
+function Login () {
+    var user = $("#log_user").val();
+    var pass = $("#log_pass").val();
+    
+    if(user != "" && pass != "") {
+        var data = $("#form-login").serialize();
+
+        $.ajax({
+            data: data,
+            type: "post",
+            url: "/php/login.php",
+            success: function (data) {
+                console.log(data);
+                console.log("Login AJAX worked.");
+                window.location.href = "/home/";
+        ***REMOVED***
+    ***REMOVED***);
+***REMOVED***
+
+***REMOVED***
+        $("#error-login").text("Ingresa todos los datos por favor.")
+***REMOVED***
+}
