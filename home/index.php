@@ -39,7 +39,7 @@
 
         <div id="nav-mobile">
             <i class="material-icons" style="float: left">
-                <a>menu</a>
+                <a data-toggle="modal" data-target="#nav-mobile-menu">menu</a>
             </i>
             <i class="material-icons" style="float: right">
                 <a data-toggle="modal" data-target="#logout">power_settings_new</a>
@@ -49,9 +49,14 @@
 
     <aside id="sidebar" class="shadow" ng-controller="AsideVars">
         <div id="sidebar-top">
-            <i class="material-icons">
-                <a>menu</a>
-            </i>
+            <ul>
+                <li>
+                    <i class="material-icons">
+                        <a class="sidebar-toggle">menu</a>
+                    </i>
+                    <a class="sidebar-toggle extended"></a>
+                </li>
+            </ul>
         </div>
         <div id="sidebar-menu">
             <ul>
@@ -59,44 +64,56 @@
                     <i class="material-icons">
                         <a ng-click="tab.selectTab(0)">person_pin</a>
                     </i>
+                    <a class="extended" ng-click="tab.selectTab(0)"><b>Home</b></a>
                 </li>
-                <li>
+                <li class="enable">
                     <i class="material-icons">
-                        <a ng-click="tab.selectTab(1)">card_giftcard</a>
+                        <a ng-click="!Enable||tab.selectTab(1)">card_giftcard</a>
                     </i>
+                    <a class="extended" ng-click="!Enable||tab.selectTab(1)">Intercambio</a>
                 </li>
-                <li>
+                <li class="enable">
                     <i class="material-icons">
-                        <a ng-click="tab.selectTab(2)">ac_unit</a>
+                        <a ng-click="!Enable||tab.selectTab(2)">ac_unit</a>
                     </i>
+                    <a class="extended" ng-click="!Enable||tab.selectTab(2)">Tarjetas</a>
                 </li>
-                <li>
+                <li class="enable">
                     <i class="material-icons">
-                        <a class="enable" ng-click="tab.selectTab(3)">email</a>
-                        <a class="disable">email</a>
+                        <a ng-click="!Enable||tab.selectTab(3)">email</a>
                     </i>
+                    <a class="extended" ng-click="!Enable||tab.selectTab(3)">Mensajeria</a>
                 </li>
-                <li>
+                <li class="disable">
                     <i class="material-icons">
-                        <a ng-click="tab.selectTab(4)">local_play</a>
+                        <!--<a ng-click="tab.selectTab(4)">local_play</a>-->
+                        <a>local_play</a>
                     </i>
+                    <a class="extended">Votaciones</a>
                 </li>
                 <li>
                     <i class="material-icons">
                         <a ng-click="tab.selectTab(5)">create</a>
                     </i>
+                    <a class="extended" ng-click="tab.selectTab(5)">Perfil</a>
                 </li>
                 <li ng-show="admin == true">
                     <i class="material-icons">
-                        <a class="admin-click" ng-click="tab.selectTab(6)">grade</a>
+                        <a ng-click="tab.selectTab(6)">grade</a>
                     </i>
+                    <a class="extended" ng-click="tab.selectTab(6)">Admin</a>
                 </li>
             </ul>
         </div>
         <div id="sidebar-bottom">
-            <i class="material-icons">
-                <a data-toggle="modal" data-target="#logout">power_settings_new</a>
-            </i>
+            <ul>
+                <li>
+                    <i class="material-icons">
+                        <a data-toggle="modal" data-target="#logout">power_settings_new</a>
+                    </i>
+                    <a class="extended" data-toggle="modal" data-target="#logout">Logout</a>
+                </li>
+            </ul>
         </div>
     </aside>
     
@@ -154,6 +171,31 @@
 
                 <div class="mdl-dialog__actions">
                     <button id="submit-logout" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Logout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nav-mobile-menu" class="modal fade" role="dialog" ng-controller="AsideVars">
+        <div class="mdl-dialog shadow" role="document">
+            <div>
+                <h4 class="mdl-dialog__title">
+                    <a data-dismiss="modal">Posada Discipulos 2016</a>
+                </h4>
+                <i class="material-icons" style="">
+                    <a data-dismiss="modal">arrow_back</a>
+                </i>
+                <div class="mdl-dialog__content">
+                    <ul>
+                        <li><a ng-click="tab.selectTab(0)" data-dismiss="modal"><b>Home</b></a></li>
+                        <li ng-show="Enable == true"><a ng-click="!Enable||tab.selectTab(1)" data-dismiss="modal">Intercambio</a></li>
+                        <li ng-show="Enable == true"><a ng-click="!Enable||tab.selectTab(2)" data-dismiss="modal">Tarjetas</a></li>
+                        <li ng-show="Enable == true"><a ng-click="!Enable||tab.selectTab(3)" data-dismiss="modal">Mensajeria</a></li>
+                        <li style="display:none"><a data-dismiss="modal">Votaciones</a></li>
+                        <li><a ng-click="tab.selectTab(5)" data-dismiss="modal">Perfil</a></li>
+                        <li ng-show="admin == true"><a ng-click="tab.selectTab(5)" data-dismiss="modal">Admin</a></li>
+                        <li><a data-dismiss="modal" data-toggle="modal" data-target="#logout">Logout</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

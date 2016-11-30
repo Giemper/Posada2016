@@ -44,13 +44,18 @@ p {
 /* NAVBAR */
 #navbar {
     height: 64px;
-    margin-left: 64px;
+    margin-left: 72px;
     background-color: #BD605C;
     position: fixed;
     right: 0;
     left: 0;
     z-index: 10;
+    transition: 0.3s;
 }
+    #navbar.toggle {
+        margin-left: 270px;
+        transition: 0.3s;
+***REMOVED***
 
     #navbar h1{
         margin: 0;
@@ -89,6 +94,48 @@ p {
             color: rgba(255, 255, 255, 1); 
             text-decoration: none;
     ***REMOVED***
+        #nav-mobile-menu .mdl-dialog {
+            background-color: #335052;
+            width: 56dp;
+            /*width: 320px;*/
+            max-width: 100%;
+            height: 100%;
+    ***REMOVED***
+
+            #nav-mobile-menu h4 a{
+                padding-top: 20px;
+                text-decoration: none;
+                color: white;
+        ***REMOVED***
+
+            #nav-mobile-menu .material-icons {
+                margin: -95px 20px 0 0;
+                float: right;
+                font-size: 24px;
+        ***REMOVED***
+
+            #nav-mobile-menu.fade {
+                animation-name: fadeleft;
+                animation-duration: 0.5s;
+        ***REMOVED***
+
+            #nav-mobile-menu .mdl-dialog__content {
+                padding: 20px 0 24px 0;
+        ***REMOVED***
+
+            #nav-mobile-menu ul li a {
+                display: inline-block;
+                color: white;
+                vertical-align: middle;
+                width: calc(100% - 24px);
+                padding: 22px 0 22px 24px;
+                text-decoration: none;
+                transition: 0.3s;
+                font-size: 24px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                cursor: pointer;
+        ***REMOVED***
 
 /* SIDEBAR */
 #sidebar {
@@ -99,19 +146,49 @@ p {
     bottom: 0;
     left: 0;
     z-index: 20;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: 0.3s;
 }
+    #sidebar .extended {
+        display: none;
+***REMOVED***
+
+    #sidebar.toggle {
+        width: 270px;
+        transition: 0.3s;
+***REMOVED***
+
+    #sidebar.toggle .extended {
+        display: flex;
+        text-transform: uppercase;
+        padding: 22px 0 16px 24px;
+        font-size: 22px;
+        letter-spacing: 1.5px;
+***REMOVED***
+
+    .toggle #sidebar-menu li,
+    .toggle #sidebar-top li,
+    .toggle #sidebar-bottom li {
+        display: inline-flex;
+        width: 100%;
+***REMOVED***
 
     #sidebar-menu ul,
-    #sidebar-top i,
-    #sidebar-bottom i {
+    #sidebar-top ul,
+    #sidebar-bottom ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
 ***REMOVED***
 
     #sidebar-menu ul li a,
-    #sidebar-top i a,
-    #sidebar-bottom i a {
+    #sidebar-top ul li a,
+    #sidebar-bottom ul li a {
         display: inline-block;
         color: white;
         vertical-align: middle;
@@ -119,24 +196,33 @@ p {
         padding: 17px 0 16px 20px;
         font-size: 32px;
         text-decoration: none;
+***REMOVED***
+
+    #sidebar-menu ul li,
+    #sidebar-top ul li,
+    #sidebar-bottom ul li {
         cursor: pointer;
 ***REMOVED***
 
-    #sidebar-menu ul li a:hover,
-    #sidebar-bottom ul li a:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-***REMOVED***
-
-    #sidebar-menu ul li a.disable {
-        color: #71888A;
+    #sidebar-menu ul li.disable a {
         cursor: default;
 ***REMOVED***
 
-    #sidebar-menu ul li a.disable:hover {
-        background-color: rgba(0, 0, 0, 0);
+    #sidebar-menu ul li:hover {
+        background-color: rgba(0, 0, 0, 0.1);
 ***REMOVED***
 
-    #sidebar-top i a {
+    #sidebar-menu ul li.disable a {
+        color: #71888A;
+        
+***REMOVED***
+
+    #sidebar-menu ul li.disable:hover {
+        background-color: #335052;
+        cursor: default;
+***REMOVED***
+
+    #sidebar-top a {
         background-color: #284142;
 ***REMOVED***
 
@@ -149,7 +235,13 @@ p {
 #directive-cards {
     padding-top: 90px;
     margin-left: 72px;
+    transition: 0.3s;
 }
+    #directive-cards.toggle {
+        margin-left: 270px;
+        transition: 0.3s;
+***REMOVED***
+
     #directive-cards h1 {
         font-weight: normal;
         margin-bottom: 10px;
@@ -221,7 +313,9 @@ p {
 
 @media only screen and (max-width: 750px) {
     #navbar,
-    #directive-cards {
+    #directive-cards,
+    #navbar.toggle,
+    #directive-cards.toggle {
         margin-left: 0;
 ***REMOVED***
 
@@ -259,4 +353,9 @@ p {
 @keyframes fadedown {
     from {margin-top: -100px;}
     to {margin-top: 0;}
+}
+
+@keyframes fadeleft {
+    from {margin-left: -100px;}
+    to {margin-left: 0;}
 }

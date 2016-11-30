@@ -12,14 +12,22 @@ $(".btn_activities").click(function() {
 
 $("#submit-register").click(function () {
     var data = $('#form-register').serialize();
+    $("#register-echo").empty();
 
     $.ajax({
         data: data,
         type: "post",
         url: "/php/register.php",
         success: function (data) {
-            console.log(data);
-            console.log("AJAX worked.");
+            if(data.length > 0) {
+                $("#register-echo").append(data);
+        ***REMOVED***
+        ***REMOVED***
+                console.log("AJAX worked.");
+                $("#register").modal("toggle");
+                $("#success").modal("toggle");
+                $("input").val(null);
+        ***REMOVED***
     ***REMOVED***
 ***REMOVED***);
 });

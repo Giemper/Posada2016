@@ -17,12 +17,8 @@ function truefalse (value) {
 
 function exclusive () {
     if(giftee == -1 || inter == 0) {
-        $(".enable").hide();
-        $(".disable").show();
-***REMOVED***
-***REMOVED***
-        $(".enable").show();
-        $(".disable").hide();
+        
+
 ***REMOVED***
 }
 
@@ -69,16 +65,17 @@ $("#submit-update").click(function () {
 ***REMOVED***);
 });
 
-// $(".admin-click").click(function ()  {
-//         $.ajax({
-//             type: "post",
-//             url: "/home/php/users.php",
-//             success: function (data) {
-//                 users = $.parseJSON(data);
-//                 console.log(users);
-//         ***REMOVED***
-//     ***REMOVED***);
-// });
+$(".sidebar-toggle").click(function () {
+    $("#sidebar").toggleClass("toggle");
+    $("#directive-cards").toggleClass("toggle");
+    $("#navbar").toggleClass("toggle");
+});
+
+$("#users-repeat").on("click", ".admin-update", function () {
+    var ID = $(".admin-update").prop('title');
+    console.log(ID);
+    console.log("lol");
+});
 
 //ANGULAR
 app.controller('MainVars', function ($scope) {
@@ -87,6 +84,13 @@ app.controller('MainVars', function ($scope) {
 
 app.controller('AsideVars', function ($scope) {
     $scope.admin = truefalse(admin);
+    $scope.Enable = true;
+
+    if(giftee == -1 || inter == 0) {
+        $scope.Enable = false;
+        $(".enable").toggleClass("disable");
+        
+***REMOVED***
 });
 
 app.controller('AdminVars', function ($scope) {

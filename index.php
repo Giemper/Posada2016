@@ -154,7 +154,7 @@
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:50%">
                             <input class="mdl-textfield__input" type="password" name="reg_pass">
-                            <label class="mdl-textfield__label" for="reg_pass">Ingresa Contraseña</label>
+                            <label class="mdl-textfield__label" for="reg_pass">Ingresa Contraseña (8)</label>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:50%">
                             <input class="mdl-textfield__input" type="password" name="reg_pass_2">
@@ -214,10 +214,10 @@
                             <input type="checkbox" id="inter_switch" name="inter_switch" class="mdl-switch__input" checked>
                             <span class="mdl-switch__label">Quiero participar en el <b>Intercambio de Regalos</b>.</span>
                         </label>
-
-                        
                     </form>
                 </div>
+
+                <div id="register-echo"></div>
 
                 <div class="mdl-dialog__actions">
                     <button id="submit-register" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>
@@ -269,6 +269,22 @@
                         <li><a id="btn_register" data-dismiss="modal" data-toggle="modal" data-target="#register">Registro</a></li>
                         <li><a id="btn_register" data-dismiss="modal" data-toggle="modal" data-target="#login"><b>Login</b></a></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="success" class="modal fade" role="dialog">
+        <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto;">
+            <div style="padding: 0 50px 25px 50px">
+                <h1 class="mdl-dialog__title">Registro Exitoso</h1>
+
+                <div class="mdl-dialog__content">
+                    <p>Pronto recibiras un correo confirmando tu registro. Por mientras ya puedes acceder a tu perfil.</p>
+                </div>
+
+                <div class="mdl-dialog__actions">
+                    <button id="success-ok" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">Chido</button>
                 </div>
             </div>
         </div>

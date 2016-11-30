@@ -327,12 +327,14 @@ footer {
 
 @media only screen and (max-width: 650px) {
     #register,
-    #login {
+    #login,
+    #success {
         padding: 0 15px;
 ***REMOVED***
 
     #register .mdl-dialog,
-    #login .mdl-dialog {
+    #login .mdl-dialog,
+    #success .mdl-dialog {
         min-width:100%;
 ***REMOVED***
 
@@ -342,7 +344,8 @@ footer {
 }
 
 #register .mdl-dialog,
-#login .mdl-dialog {
+#login .mdl-dialog,
+#success .mdl-dialog {
     background-color: white;
     margin: 80px auto 0 auto;
     width:80%;
@@ -351,9 +354,16 @@ footer {
     #login .mdl-dialog {
         max-width: 450px;
 ***REMOVED***
+    #success .mdl-dialog {
+        max-width: 500px;
+***REMOVED***
+    #success .mdl-dialog p {
+        font-size: 16px;
+***REMOVED***
 
 #register .mdl-dialog__content,
-#login .mdl-dialog__content {
+#login .mdl-dialog__content,
+#succes .mdl-dialog__content {
     color: rgba(0,0,0,.87);
 }
 

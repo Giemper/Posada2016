@@ -21,13 +21,13 @@
     <div class="mdl-card__supporting-text" ng-controller="AdminVars">
         <h1>Lista de Usuarios y Compatibilidad</h1>
         <div>
-            <div ng-repeat="x in Users" class="mdl-row" style="display: flex">
+            <div id="users-repeat" ng-repeat="x in Users" class="mdl-row" style="display: flex">
                 <h4 ng-show="x.Inter == 1" style="font-size: 16px" class="mdl-cell mdl-cell--4-col">{{x.ID}} - {{x.FirstName}} {{x.LastName}}</h4>
                 <h4 ng-show="x.Inter == 0" style="font-size: 16px; color: #B89695" class="mdl-cell mdl-cell--4-col">{{x.ID}} - {{x.FirstName}} {{x.LastName}}</h4>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col" style="padding:0">
                     <input class="mdl-textfield__input" type="text" name="input_{{x.ID}}" style="width:100%;">
                 </div>
-                <button type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect mdl-cell mdl-cell--2-col">Update</button>
+                <button id="button_{{x.ID}}" title="{{x.ID}}" type="button" style="color: white" class="admin-update mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect mdl-cell mdl-cell--2-col">Update</button>
             </div>
         </div>
     </div>

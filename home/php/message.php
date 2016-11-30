@@ -13,10 +13,6 @@
             $name = $row["FirstName"];
             $mail = $row["Email"];
 
-            // ini_set('SMTP', 'smtp.1and1.mx');
-            // ini_set('smtp_port', 587);
-            // ini_set('sendmail_from', 'posada@giemper.com');
-
             $to = $mail;
             $subject = "Tu Querido Santa te envio un mensaje!";
             $message_body = '<html>
