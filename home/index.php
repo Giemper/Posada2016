@@ -17,6 +17,11 @@
 <html ng-app="posada">
 <head>
     <title>Posada Discípulos 2016</title>
+    <link rel="shortcut icon" href="http://posada.giemper.com/img/2016.ico">
+    <meta property="og:image" content="http://posada.giemper.com/img/Logo2016.png"/>
+    <meta property="og:title" content="Posada Discipulos 2016"/>
+    <meta property="og:description" content="La gran fiesta anual en donde se une un grupo de personas que, aunque ya no viven en las mismas ciudades, se reúnen cada Navidad para celebrar las cosas importantes en la vida: amistad, tolerancia, y José."/>
+    <meta property="og:url" content="http://posada.giemper.com"/>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
@@ -50,11 +55,10 @@
     <aside id="sidebar" class="shadow" ng-controller="AsideVars">
         <div id="sidebar-top">
             <ul>
-                <li>
+                <li class="sidebar-toggle">
                     <i class="material-icons">
-                        <a class="sidebar-toggle">menu</a>
+                        <a>menu</a>
                     </i>
-                    <a class="sidebar-toggle extended"></a>
                 </li>
             </ul>
         </div>
@@ -177,8 +181,8 @@
     </section>
 
     <section id="nav-mobile-menu" class="modal fade" role="dialog" ng-controller="AsideVars">
-        <div class="mdl-dialog shadow" role="document">
-            <div>
+        <div class="mdl-dialog" role="document">
+            <div class="shadow">
                 <h4 class="mdl-dialog__title">
                     <a data-dismiss="modal">Posada Discipulos 2016</a>
                 </h4>
@@ -213,5 +217,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/daily.js"></script>
 </body>
 </html>

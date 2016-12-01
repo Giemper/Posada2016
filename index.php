@@ -9,9 +9,14 @@
 <html>
 <head>
     <title>Posada Discípulos 2016</title>
+    <link rel="shortcut icon" href="img/2016.ico">
+    <meta property="og:image" content="img/Logo2016.png"/>
+    <meta property="og:title" content="Posada Discipulos 2016"/>
+    <meta property="og:description" content="La gran fiesta anual en donde se une un grupo de personas que, aunque ya no viven en las mismas ciudades, se reúnen cada Navidad para celebrar las cosas importantes en la vida: amistad, tolerancia, y José."/>
+    <meta property="og:url" content="http://posada.giemper.com"/>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1">
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -25,7 +30,7 @@
 <body>
     <nav id="navbar" class="shadow">
         <div class="content">
-            <h1><a href="#">Posada Discípulos 2016</a></h1>
+            <h1><a class="btn_home">Posada Discípulos 2016</a></h1>
             <ul id="nav-desk">
                 <li><a id="btn_register" data-toggle="modal" data-target="#login"><b>Login</b></a></li>
                 <li><a id="btn_register" data-toggle="modal" data-target="#register">Registro</a></li>
@@ -45,9 +50,9 @@
 
     <header id="intro" class="shadow">
         <div class="box">
-            <h2>Posada Discipulos</h2>
-            <h1>2016</h1>
-            <h3>Diciembre 30</h3>
+            <a class="btn_activities">
+                <img style="height: 80%; margin: 10vh 0; max-height: 100vw;" src="img/Logo2016.png" alt="Gracias Paulina por el logo :)">
+            </a>
         </div>
     </header>
 
@@ -139,7 +144,7 @@
     <section id="register" class="modal fade" role="dialog" style="padding-bottom: 30px">
         <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto">
 
-            <div style="padding: 0 50px 25px 50px">
+            <div class="modal-margin">
                 <h1 class="mdl-dialog__title">Registro</h1>
 
                 <div class="mdl-dialog__content">
@@ -228,7 +233,7 @@
 
     <section id="login" class="modal fade" role="dialog">
         <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto;">
-            <div style="padding: 0 50px 25px 50px">
+            <div class="modal-margin">
                 <h1 class="mdl-dialog__title">Login</h1>
 
                 <div class="mdl-dialog__content">
@@ -254,8 +259,8 @@
     </section>
 
     <section id="nav-mobile-menu" class="modal fade" role="dialog">
-        <div class="mdl-dialog shadow" role="document">
-            <div>
+        <div class="mdl-dialog" role="document">
+            <div class="shadow">
                 <h4 class="mdl-dialog__title">
                     <a data-dismiss="modal">Posada Discipulos 2016</a>
                 </h4>
@@ -276,7 +281,7 @@
 
     <section id="success" class="modal fade" role="dialog">
         <div class="mdl-dialog" role="document" style="margin-left: auto; margin-right: auto;">
-            <div style="padding: 0 50px 25px 50px">
+            <div class="modal-margin">
                 <h1 class="mdl-dialog__title">Registro Exitoso</h1>
 
                 <div class="mdl-dialog__content">

@@ -7,15 +7,88 @@
         padding-left: 25px;
         padding-top: 3px;
 ***REMOVED***
+
+    #votepad {
+        display: inline-flex; 
+        padding: 10px 10px 0 10px; 
+        height: 200px;
+***REMOVED***
+
+    .votepad-div {
+        min-height: 0;
+        height: 100%;
+        cursor: pointer;
+***REMOVED***
+
+    .votepad-circle {
+        width: 135px;
+        height: 135px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 12px auto 5px auto;
+***REMOVED***
+
+    .votepad-div img {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+***REMOVED***
+
+    .votepad-team {
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 10px 0 0 0;
+        font-size: 25px;
+        font-weight: bold;
+***REMOVED***
+
+    .votepad-div img,
+    .votepad-team {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+***REMOVED***
+    
+    @media only screen and (max-width: 380px) {
+        .votepad-team {
+            font-size: 20px;
+    ***REMOVED***
+***REMOVED***
 </style>
 
 <header class="mdl-card">
     <div class="mdl-card__supporting-text">
         <h1>Bienvenido {{name}}!</h1>
         <p>Hola hola. Gracias por registrarte, pronto sera el "match" para ambos intercambios. Hasta entonces, te invitamos a que explores la pagina, y que edites tu información para hacer mas claro tu perfil. Nos vemos el 30 de Diciembre.</p>
-        <p></p> 
     </div>
 </header>
+
+<div class="mdl-card" ng-controller="DailyVars">
+    <div style="margin: 20px 30px 0 30px;">
+        <h1 style="text-align: center">Encuesta Diaria</h1>
+        <p><b>{{question}}</b></p>
+    </div>
+    <div id="votepad">
+        <div class="mdl-card votepad-div" style="background-color:#8DB5D6; margin-right:5px" title="left">
+            <div class="votepad-circle">
+                <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="">
+            </div>
+            <p class="votepad-team">#team{{team1}}</p>
+        </div>
+        <div class="mdl-card votepad-div" style="background-color:#DB9C9C; margin-left:5px" title="right">
+            <div class="votepad-circle">
+                <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="">
+            </div>
+            <p class="votepad-team">#team{{team2}}</p>
+        </div>
+    </div>
+</div>
 
 <div class="mdl-card">
     <div class="mdl-card__title header-0"></div>

@@ -51,7 +51,7 @@ p {
     z-index: 10;
 }
 
-    #navbar h1{
+    #navbar h1 {
         margin: 0;
         float: left;
         padding: 14px 20px;
@@ -103,18 +103,28 @@ p {
 
     #nav-mobile a,
     #nav-mobile .material-icons,
-    #nav-mobile-menu .material-icons a {
+    #nav-mobile-menu a,
+    #navbar h1 a {
         color: rgba(255, 255, 255, 1); 
         text-decoration: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 ***REMOVED***
 
     #nav-mobile-menu .mdl-dialog {
         background-color: #BD605C;
         width: 56dp;
-        /*width: 320px;*/
         max-width: 100%;
         height: 100%;
 ***REMOVED***
+        #nav-mobile-menu .mdl-dialog .shadow {
+            background-color: #BD605C;
+            min-height: 100%;
+    ***REMOVED***
         #nav-mobile-menu h4 a{
             padding-top: 20px;
             text-decoration: none;
@@ -249,6 +259,38 @@ footer {
         order: 2;
 ***REMOVED***
 
+#register .mdl-dialog,
+#login .mdl-dialog,
+#success .mdl-dialog {
+    background-color: white;
+    margin: 80px auto 0 auto;
+    width:80%;
+    max-width: 650px;
+}
+    #login .mdl-dialog {
+        max-width: 450px;
+***REMOVED***
+    #success .mdl-dialog {
+        max-width: 500px;
+***REMOVED***
+    #success .mdl-dialog p {
+        font-size: 16px;
+***REMOVED***
+
+#register .mdl-dialog__content,
+#login .mdl-dialog__content,
+#succes .mdl-dialog__content {
+    color: rgba(0,0,0,.87);
+}
+
+.modal-margin {
+    padding: 0 50px 25px 50px;
+}
+
+.mdl-textfield {
+    width: 100%;
+}
+
 
 /* MEDIA */
 @media only screen and (min-height: 900px) {
@@ -294,15 +336,19 @@ footer {
         display: block;
 ***REMOVED***
 
+    .modal-margin {
+        padding: 0 0 25px 0;
+***REMOVED***
+
     .content img {
         width:80%;
         margin: 0 auto;
         display: flex;
 ***REMOVED***
 
-    header {
+    /*header {
         height: 400px;
-***REMOVED***
+***REMOVED****/
 
         header .box h1 {
             padding-top: 60px;
@@ -341,35 +387,6 @@ footer {
     .mdl-switch {
         margin-bottom: 0;
 ***REMOVED***
-}
-
-#register .mdl-dialog,
-#login .mdl-dialog,
-#success .mdl-dialog {
-    background-color: white;
-    margin: 80px auto 0 auto;
-    width:80%;
-    max-width: 650px;
-}
-    #login .mdl-dialog {
-        max-width: 450px;
-***REMOVED***
-    #success .mdl-dialog {
-        max-width: 500px;
-***REMOVED***
-    #success .mdl-dialog p {
-        font-size: 16px;
-***REMOVED***
-
-#register .mdl-dialog__content,
-#login .mdl-dialog__content,
-#succes .mdl-dialog__content {
-    color: rgba(0,0,0,.87);
-}
-
-
-.mdl-textfield {
-    width: 100%;
 }
 
 .fade {

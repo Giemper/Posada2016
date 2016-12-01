@@ -5,21 +5,18 @@ var lego = "lego";
 
 
 
-
+function exclusive () {
+    if(giftee == "-1" || inter == "0") {
+        $(".enable").toggleClass("disable");
+***REMOVED***
+}
 
 // Clases
 function truefalse (value) {
-    if(value == 1)
+    if(value == 1 || value == "1")
         return true;
     else
         return false;
-}
-
-function exclusive () {
-    if(giftee == -1 || inter == 0) {
-        
-
-***REMOVED***
 }
 
 // JQUERY
@@ -86,10 +83,9 @@ app.controller('AsideVars', function ($scope) {
     $scope.admin = truefalse(admin);
     $scope.Enable = true;
 
-    if(giftee == -1 || inter == 0) {
+    if(giftee == "-1" || inter == "0") {
         $scope.Enable = false;
-        $(".enable").toggleClass("disable");
-        
+        $(".enable").toggleClass("disable");        
 ***REMOVED***
 });
 
