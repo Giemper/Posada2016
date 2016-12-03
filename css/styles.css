@@ -165,7 +165,7 @@ header {
     width: 100%;
     height: calc(100% - 64px);
     padding-top: 64px;
-    background: no-repeat center url("http://cdn.history.com/sites/2/2015/04/hith-father-christmas-lights-iStock_000029514386Large.jpg");
+    background: no-repeat center url("../img/header.jpg");
 }
     header .box {
         text-align: center;

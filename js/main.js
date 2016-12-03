@@ -45,6 +45,7 @@ $(".input-login").keypress(function (key) {
 function Login () {
     var user = $("#log_user").val();
     var pass = $("#log_pass").val();
+    $("#login-echo").empty();
     
     if(user != "" && pass != "") {
         var data = $("#form-login").serialize();
@@ -54,9 +55,12 @@ function Login () {
             type: "post",
             url: "/php/login.php",
             success: function (data) {
-                console.log(data);
-                console.log("Login AJAX worked.");
-                window.location.href = "/home/";
+                if(data.length > 0) {
+                    $("#login-echo").append(data);
+            ***REMOVED***
+            ***REMOVED***
+                    window.location.href = "/home/";
+            ***REMOVED***
         ***REMOVED***
     ***REMOVED***);
 ***REMOVED***

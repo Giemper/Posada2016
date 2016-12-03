@@ -1,3 +1,8 @@
+<style>
+    #directive-cards .header-2 {
+        background: url('img/header_card.png') center / cover;
+***REMOVED***
+</style>
 <div class="mdl-card__title header-2"></div>
 <div class="mdl-card__title header-title">
     <h2 class="mdl-card__title-text">Intercambio de Tarjetas</h2>

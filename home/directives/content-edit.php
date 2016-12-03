@@ -5,7 +5,11 @@
     $qArray = array("Platicame de Ti", "¿Que es lo que te disgusta?", "Series Favoritas", "Peliculas Favoritas", 
                     "Equipos Favoritos", "Musica Favorita", "¿Cual ha sido un buen recuerdo Navideño para ti?", "Si Fueras un <b>Meme</b>, ¿Cual serias?");
 ***REMOVED***
-
+<style>
+    #directive-cards .header-5 {
+        background: url('img/header_edit.png') center / cover;
+***REMOVED***
+</style>
 <div class="mdl-card__title header-5"></div>
 <div class="mdl-card__title header-title">
     <h2 class="mdl-card__title-text">Edita tu Información</h2>

@@ -18,10 +18,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link async href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link async rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.light_green-red.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link async rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -249,6 +249,8 @@
                     </form>
                     <p id="error-login" style="color: red"></p>
                 </div>
+
+                <div id="login-echo"></div>
 
                 <div class="mdl-dialog__actions">
                     <button id="submit-login" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>

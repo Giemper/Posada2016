@@ -3,8 +3,6 @@ exclusive();
 var users;
 var lego = "lego";
 
-
-
 function exclusive () {
     if(giftee == "-1" || inter == "0") {
         $(".enable").toggleClass("disable");
@@ -68,11 +66,11 @@ $(".sidebar-toggle").click(function () {
     $("#navbar").toggleClass("toggle");
 });
 
-$("#users-repeat").on("click", ".admin-update", function () {
-    var ID = $(".admin-update").prop('title');
-    console.log(ID);
-    console.log("lol");
-});
+// $("#users-repeat").on("click", ".admin-update", function () {
+//     var ID = $(".admin-update").prop('title');
+//     // console.log(ID);
+//     // console.log("lol");
+// });
 
 //ANGULAR
 app.controller('MainVars', function ($scope) {
@@ -101,7 +99,7 @@ app.controller('AdminVars', function ($scope) {
             success: function (data) {
                 if(file === "users") {
                     $scope.Users = $.parseJSON(data);
-                    console.log($scope.Users);
+                    // console.log($scope.Users);
             ***REMOVED***
                 else if(file === "blocked") {
 

@@ -1,6 +1,24 @@
+***REMOVED***
+    session_start();
+    include_once 'connect.php';
+    
+    $date = getDate();
+    $day = $date["mday"];
+    $month = $date["mon"];
+    $year = $date["year"];
+    $format = $month . "/" . $day . "/" . $year;
+
+    $result = mysqli_query($con, "SELECT Vote FROM Daily WHERE ID = ".$_SESSION['user_id']." AND DATE = '".$format."';");
+    $vote = mysqli_num_rows($result);
+    mysqli_close($con);
+***REMOVED***
 <style>
     #directive-cards .header-0 {
-        background: url('https://phlow.github.io/feeling-responsive/images/unsplash_brooklyn-bridge_header.jpg') center / cover;
+        background: url('img/header_home.png') center / cover;
+***REMOVED***
+
+    #directive-cards .header-0-1 {
+        background: url('img/header_home1.png') center / cover;
 ***REMOVED***
     h3 {
         font-size: 20px;
@@ -21,11 +39,14 @@
 ***REMOVED***
 
     .votepad-circle {
-        width: 135px;
+        width: 123px;
         height: 135px;
         position: relative;
         overflow: hidden;
         border-radius: 50%;
+        border-style: solid;
+        border-width: 6px;
+        border-color: white;
         margin: 12px auto 5px auto;
 ***REMOVED***
 
@@ -54,6 +75,23 @@
         -ms-user-select: none;
         user-select: none;
 ***REMOVED***
+
+    .votepad-overlay {
+        height: 220px;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 5;
+        margin-top: -210px;
+***REMOVED***
+
+    .votepad-overlay p {
+        color: white;
+        text-align: center;
+        font-size: 25px;
+***REMOVED***
+
+    .off {
+        display: none;
+***REMOVED***
     
     @media only screen and (max-width: 380px) {
         .votepad-team {
@@ -70,23 +108,30 @@
 </header>
 
 <div class="mdl-card" ng-controller="DailyVars">
-    <div style="margin: 20px 30px 0 30px;">
-        <h1 style="text-align: center">Encuesta Diaria</h1>
+    <div class="mdl-card__title header-0-1"></div>
+    <div class="mdl-card__title header-title">
+        <h2 class="mdl-card__title-text">Encuesta Diaria</h2>
+    </div>
+    <div class="mdl-card__supporting-text" style="margin-bottom:0">
         <p><b>{{question}}</b></p>
     </div>
     <div id="votepad">
         <div class="mdl-card votepad-div" style="background-color:#8DB5D6; margin-right:5px" title="left">
             <div class="votepad-circle">
-                <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="">
+                <img src="{{image1}}" alt="">
             </div>
             <p class="votepad-team">#team{{team1}}</p>
         </div>
         <div class="mdl-card votepad-div" style="background-color:#DB9C9C; margin-left:5px" title="right">
             <div class="votepad-circle">
-                <img src="http://style.anu.edu.au/_anu/4/images/placeholders/person.png" alt="">
+                <img src="{{image2}}" alt="">
             </div>
             <p class="votepad-team">#team{{team2}}</p>
         </div>
+    </div>
+    <div class="votepad-overlay ***REMOVED*** if($vote == 0) { ***REMOVED***off***REMOVED*** } ***REMOVED***">
+        <p style="margin-top: 60px;">¡Gracias por votar!</p>
+        <p title="Mentira, siempre seran Genry y Vidal">Regresa mañana para una nueva pregunta con nuevos candidatos.</p>
     </div>
 </div>
 

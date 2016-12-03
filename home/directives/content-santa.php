@@ -1,3 +1,9 @@
+<style>
+    #directive-cards .header-1 {
+        background: url('img/header_santa.png') center / cover;
+***REMOVED***
+</style>
+
 <div class="mdl-card__title header-1"></div>
 <div class="mdl-card__title header-title">
     <h2 class="mdl-card__title-text">Intercambio de Regalos</h2>

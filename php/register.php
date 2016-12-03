@@ -6,9 +6,9 @@
         $reg_user = json_encode($_POST['reg_user']);
         $reg_pass = json_encode($_POST['reg_pass']);
         $reg_pass_2 = json_encode($_POST['reg_pass_2']);
-        $reg_first = json_encode($_POST['reg_first']);
+        $reg_first = $_POST['reg_first'];
         $reg_last = json_encode($_POST['reg_last']);
-        $reg_email = json_encode($_POST['reg_email']);
+        $reg_email = $_POST['reg_email'];
 
         $q1 = json_encode($_POST['reg_question_1']);
         $q2 = json_encode($_POST['reg_question_2']);
@@ -49,7 +49,7 @@
             $echo = true;
     ***REMOVED***
 
-        if($error) {
+        if(!$error) {
             if($_POST['inter_switch'] == 'on') {
                 $inter = 1;
         ***REMOVED***
@@ -58,7 +58,7 @@
         ***REMOVED***
 
             mysqli_query($con, "START TRANSACTION");
-            $Query_Santa = mysqli_query($con, "INSERT INTO Santa (User, Pass, FirstName, LastName, Email, Inter) VALUES (". $reg_user .", ". $reg_pass .", ". $reg_first .", ". $reg_last .", ". $reg_email .", ". $inter .")");
+            $Query_Santa = mysqli_query($con, "INSERT INTO Santa (User, Pass, FirstName, LastName, Email, Inter) VALUES (". $reg_user .", ". $reg_pass .", '". $reg_first ."', ". $reg_last .", '". $reg_email ."', ". $inter .")");
             $Query_Questions = mysqli_query($con, "INSERT INTO Questions (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) VALUES (". $q1 .", ". $q2 .", ". $q3 .", ". $q4 .", ". $q5 .", ". $q6 .", ". $q7 .", ". $q8 .")");
 
             if($Query_Santa and $Query_Questions) {
@@ -70,7 +70,7 @@
                 <body><style>
                 p { font-family: "Lato", "Arial", sans-serif; font-size: 15px; text-align: justify; }
                 h1, h2 { color: #BD605C; font-family: "Roboto Slab", "Arial", serif; font-weight: normal; }</style>
-                <h1>&iexcl;Hola '.$name.'!</h1><br>
+                <h1>&iexcl;Hola '.$reg_first.'!</h1><br>
                 <p style="color:#A2A7A8">Ya quedaste exitosamente registrado.</p><br>
                 <p style="color:#A2A7A8">Tu información es:</p><br>
                 <b><p>Usuario: '.$reg_user.'</p><br>
@@ -82,7 +82,7 @@
 
                 $headers  = "MIME-Version: 1.0" . "\r\n";
                 $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
-                $headers .= "To: ". $name . " <" . $mail . ">" . "\r\n";
+                $headers .= "To: ". $reg_first . " <" . $reg_email . ">" . "\r\n";
                 $headers .= "From: Posada Discipulos 2016 <posada@giemper.com>" . "\r\n";
 
                 mail($reg_email, $subject, $message_body, $headers);

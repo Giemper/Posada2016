@@ -1,16 +1,16 @@
 <style>
     #directive-cards .header-6 {
-        background: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/twitter-header-2.jpg') center / cover;
+        background: url('img/header_admin.png') center / cover;
 ***REMOVED***
 
     #directive-cards .header-6-2 {
-        background: url('https://stormideaswus.blob.core.windows.net/headerjunction/2014/91/766fc84e-88ff-439d-9a7b-4cfaa87bcd02.jpg') center / cover;
+        background: url('img/header_santa.png') center / cover;
 ***REMOVED***
     #directive-cards .header-6-3 {
-        background: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/twitter-header-3.jpg') center / cover;
+        background: url('img/header_card.png') center / cover;
 ***REMOVED***
     #directive-cards .header-6-4 {
-        background: url('http://twitpaper.weebly.com/uploads/2/5/2/2/25225891/4654274_orig.jpg') center / cover;
+        background: url('img/header_vote.png') center / cover;
 ***REMOVED***
 </style>
 <div class="mdl-card">

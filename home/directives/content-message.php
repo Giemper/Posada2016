@@ -1,6 +1,6 @@
 <style>
     #directive-cards .header-3 {
-        background: url('http://adicts.wapsite.me/1con/header/header_1.png') center / cover;
+        background: url('img/header_message.png') center / cover;
 ***REMOVED***
 </style>
 <div class="mdl-card__title header-3"></div>
