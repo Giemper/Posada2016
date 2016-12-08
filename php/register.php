@@ -43,12 +43,7 @@
             echo '<p style="color: red">Por favor ingresa un correo valido.</p>';
             $echo = true;
     ***REMOVED***
-
-        if(strlen($q1) < 10) {
-            echo '<p style="color: red">Por favor ingresa más información en tu descripción.</p>';
-            $echo = true;
-    ***REMOVED***
-
+        
         if(!$error) {
             if($_POST['inter_switch'] == 'on') {
                 $inter = 1;

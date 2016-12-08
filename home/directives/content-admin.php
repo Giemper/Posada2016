@@ -13,7 +13,7 @@
         background: url('img/header_vote.png') center / cover;
 ***REMOVED***
 </style>
-<div class="mdl-card">
+<div id="users-list" class="mdl-card">
     <div class="mdl-card__title header-6"></div>
     <div class="mdl-card__title header-title">
         <h2 class="mdl-card__title-text">Admin Panel</h2>

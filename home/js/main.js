@@ -66,11 +66,20 @@ $(".sidebar-toggle").click(function () {
     $("#navbar").toggleClass("toggle");
 });
 
-// $("#users-repeat").on("click", ".admin-update", function () {
-//     var ID = $(".admin-update").prop('title');
-//     // console.log(ID);
-//     // console.log("lol");
-// });
+$("#users-list").on("click", ".admin-update", function () {
+    var ID = $(".admin-update").prop('title');
+    var data = "id=" + ID + "&block=" + $('#input_' + ID).val();
+
+    console.log("data");
+
+    $.ajax({
+        type: "post",
+        url: "/home/php/block.php",
+        success: function (data) {
+
+    ***REMOVED***
+***REMOVED***);
+});
 
 //ANGULAR
 app.controller('MainVars', function ($scope) {
