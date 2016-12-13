@@ -6,13 +6,11 @@
         $id = json_encode($_POST['id']);
         $block = json_encode($_POST['block']);
 
-        $result = mysqli_query($con, "UPDATE TABLE Santa ON Blocked = " . $block . "WHERE ID = " . $id);
+        $result = mysqli_query($con, "UPDATE Santa SET Blocked = " . $block . " WHERE ID = " . $id);
 
-        if($result) {
-
+        if(!$result) {
+            echo "oh oh";  
     ***REMOVED***
-    ***REMOVED***
-            
-    ***REMOVED***
+        mysqli_close($con);
 ***REMOVED***
 ***REMOVED***

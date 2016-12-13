@@ -31,8 +31,16 @@ app.controller('DailyVars', function ($scope) {
         $scope.team1 = "genrykun";
         $scope.image1 = "img/vote_genrykun.jpg"
 ***REMOVED***
-    else if(dater("today") == dater("12/11/2016"))
-        $scope.question = "";
+    else if(dater("today") == dater("12/12/2016"))
+        $scope.question = "¿Quien puso una serpiente en mi bota?";
+    else if(dater("today") == dater("12/13/2016"))
+        $scope.question = "Are we Humans? Or are we _______ ?";
+    else if(dater("today") == dater("12/14/2016"))
+        $scope.question = "A little bit of Monica in my life. A little bit of Erica by my side. A little bit of Rita is all I need. A little bit of _______ imakes me your man.";
+    else if(dater("today") == dater("12/15/2016"))
+        $scope.question = "¿Quien de estos dos galanazos tiene la mejor posibilidad de actuar en la Pelicula Autobiografica del Dr. Gustavo Ortiz como el persona principal?";
+    else if(dater("today") == dater("12/16/2016"))
+        $scope.question = "8 de Cada __________ prefieren Whiskas";
 });
 
 $('#directive-cards').on('click', '.votepad-div', function() {

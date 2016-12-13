@@ -12,6 +12,8 @@
         $user_admin = $_SESSION['user_admin'];
         $user_email = $_SESSION['user_email'];
         $user_giftee = $_SESSION['user_giftee'];
+        $user_cardee = $_SESSION['user_cardee'];
+        $user_ban = $_SESSION['user_ban'];
 ***REMOVED***
 ***REMOVED***
 <html ng-app="posada">
@@ -70,23 +72,23 @@
                     </i>
                     <a class="extended" ng-click="tab.selectTab(0)"><b>Home</b></a>
                 </li>
-                <li class="enable">
+                <li class="gift-enable">
                     <i class="material-icons">
-                        <a ng-click="!Enable||tab.selectTab(1)">card_giftcard</a>
+                        <a ng-click="!Gift_Enable||tab.selectTab(1)">card_giftcard</a>
                     </i>
-                    <a class="extended" ng-click="!Enable||tab.selectTab(1)">Intercambio</a>
+                    <a class="extended" ng-click="!Gift_Enable||tab.selectTab(1)">Intercambio</a>
                 </li>
-                <li class="enable">
+                <li class="card-enable">
                     <i class="material-icons">
-                        <a ng-click="!Enable||tab.selectTab(2)">ac_unit</a>
+                        <a ng-click="!Card_Enable||tab.selectTab(2)">ac_unit</a>
                     </i>
-                    <a class="extended" ng-click="!Enable||tab.selectTab(2)">Tarjetas</a>
+                    <a class="extended" ng-click="!Card_Enable||tab.selectTab(2)">Tarjetas</a>
                 </li>
-                <li class="enable">
+                <li class="gift-enable">
                     <i class="material-icons">
-                        <a ng-click="!Enable||tab.selectTab(3)">email</a>
+                        <a ng-click="!Gift_Enable||tab.selectTab(3)">email</a>
                     </i>
-                    <a class="extended" ng-click="!Enable||tab.selectTab(3)">Mensajeria</a>
+                    <a class="extended" ng-click="!Gift_Enable||tab.selectTab(3)">Mensajeria</a>
                 </li>
                 <li class="disable">
                     <i class="material-icons">
@@ -127,12 +129,12 @@
             <content-home></content-home>
         </div>
 
+        ***REMOVED*** 
+            if($user_giftee != -1) {
+        ***REMOVED***
+
         <div class="mdl-card" ng-show="tab.isSelected(1)">
             <content-santa></content-santa>
-        </div>
-
-        <div class="mdl-card" ng-show="tab.isSelected(2)">
-            <content-card></content-card>
         </div>
 
         <div class="mdl-card" ng-show="tab.isSelected(3)">
@@ -141,7 +143,16 @@
                 <button id="submit-message" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Enviar</button>
             </div>
         </div>
+        ***REMOVED*** } ***REMOVED***
 
+        ***REMOVED*** 
+            if($user_cardee != -1) {
+        ***REMOVED***
+        <div class="mdl-card" ng-show="tab.isSelected(2)">
+            <content-card></content-card>
+        </div>
+        ***REMOVED*** } ***REMOVED***
+        
         <div class="mdl-card" ng-show="tab.isSelected(4)">
             <!--<content-vote></content-vote>-->
         </div>
@@ -192,9 +203,9 @@
                 <div class="mdl-dialog__content">
                     <ul>
                         <li><a ng-click="tab.selectTab(0)" data-dismiss="modal"><b>Home</b></a></li>
-                        <li ng-show="Enable == true"><a ng-click="!Enable||tab.selectTab(1)" data-dismiss="modal">Intercambio</a></li>
-                        <li ng-show="Enable == true"><a ng-click="!Enable||tab.selectTab(2)" data-dismiss="modal">Tarjetas</a></li>
-                        <li ng-show="Enable == true"><a ng-click="!Enable||tab.selectTab(3)" data-dismiss="modal">Mensajeria</a></li>
+                        <li ng-show="Gift_Enable == true"><a ng-click="!Gift_Enable||tab.selectTab(1)" data-dismiss="modal">Intercambio</a></li>
+                        <li ng-show="Card_Enable == true"><a ng-click="!Card_Enable||tab.selectTab(2)" data-dismiss="modal">Tarjetas</a></li>
+                        <li ng-show="Gift_Enable == true"><a ng-click="!Gift_Enable||tab.selectTab(3)" data-dismiss="modal">Mensajeria</a></li>
                         <li style="display:none"><a data-dismiss="modal">Votaciones</a></li>
                         <li><a ng-click="tab.selectTab(5)" data-dismiss="modal">Perfil</a></li>
                         <li ng-show="admin == true"><a ng-click="tab.selectTab(6)" data-dismiss="modal">Admin</a></li>
@@ -212,6 +223,8 @@
         var admin = '***REMOVED*** echo $user_admin; ***REMOVED***';
         var email = '***REMOVED*** echo $user_email; ***REMOVED***';
         var giftee = '***REMOVED*** echo $user_giftee; ***REMOVED***';
+        var cardee = '***REMOVED*** echo $user_cardee; ***REMOVED***';
+        var ban = '***REMOVED*** echo $user_ban; ***REMOVED***';
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

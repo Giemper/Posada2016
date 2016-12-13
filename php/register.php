@@ -3,10 +3,10 @@
     $error = false;
 
     if(isset($_REQUEST) && $success) {
-        $reg_user = json_encode($_POST['reg_user']);
-        $reg_pass = json_encode($_POST['reg_pass']);
-        $reg_pass_2 = json_encode($_POST['reg_pass_2']);
-        $reg_first = $_POST['reg_first'];
+        $reg_user = $_POST['reg_user'];
+        $reg_pass = $_POST['reg_pass'];
+        $reg_pass_2 = $_POST['reg_pass_2'];
+        $reg_first = json_encode($_POST['reg_first']);
         $reg_last = json_encode($_POST['reg_last']);
         $reg_email = $_POST['reg_email'];
 
@@ -24,24 +24,24 @@
             $error = true;
     ***REMOVED***
 
-        if($reg_user == '""') {
+        if($reg_user == '""' || $reg_user == '') {
             echo '<p style="color: red">Por favor ingresa tu usuario.</p>';
-            $echo = true;
+            $error = true;
     ***REMOVED***
 
         if(strlen($reg_pass) < 8 || strlen($reg_pass_2) < 8) {
             echo '<p style="color: red">Por favor ingresa una contraseña valida mayor a 8 caracteres.</p>';
-            $echo = true;
+            $error = true;
     ***REMOVED***
 
-        if($reg_first == '""' || $reg_last == '""') {
+        if($reg_first == '' || $reg_last == '') {
             echo '<p style="color: red">Por favor ingresa tus nombres.</p>';
-            $echo = true;
+            $error = true;
     ***REMOVED***
 
-        if($reg_email == '""') {
+        if($reg_email == '') {
             echo '<p style="color: red">Por favor ingresa un correo valido.</p>';
-            $echo = true;
+            $error = true;
     ***REMOVED***
         
         if(!$error) {
@@ -53,7 +53,7 @@
         ***REMOVED***
 
             mysqli_query($con, "START TRANSACTION");
-            $Query_Santa = mysqli_query($con, "INSERT INTO Santa (User, Pass, FirstName, LastName, Email, Inter) VALUES (". $reg_user .", ". $reg_pass .", '". $reg_first ."', ". $reg_last .", '". $reg_email ."', ". $inter .")");
+            $Query_Santa = mysqli_query($con, "INSERT INTO Santa (User, Pass, FirstName, LastName, Email, Inter) VALUES ('". $reg_user ."', '". $reg_pass ."', ". $reg_first .", ". $reg_last .", '". $reg_email ."', ". $inter .")");
             $Query_Questions = mysqli_query($con, "INSERT INTO Questions (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8) VALUES (". $q1 .", ". $q2 .", ". $q3 .", ". $q4 .", ". $q5 .", ". $q6 .", ". $q7 .", ". $q8 .")");
 
             if($Query_Santa and $Query_Questions) {

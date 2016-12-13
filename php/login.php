@@ -6,7 +6,7 @@
         $log_user = $_POST['log_user'];
         $log_pass = $_POST['log_pass'];
 
-        $sql = "SELECT ID, FirstName, Inter, Admin, Email, Giftee FROM Santa WHERE User = '".$log_user."' AND Pass = '".$log_pass."'";
+        $sql = "SELECT ID, FirstName, Inter, Admin, Email, Giftee, Cardee, Ban FROM Santa WHERE User = '".$log_user."' AND Pass = '".$log_pass."'";
         $result = mysqli_query($con, $sql);
 
         if(mysqli_num_rows($result) == 1) {
@@ -17,6 +17,8 @@
             $_SESSION["user_admin"] = $row["Admin"];
             $_SESSION["user_email"] = $row["Email"];
             $_SESSION["user_giftee"] = $row["Giftee"];
+            $_SESSION["user_cardee"] = $row["Cardee"];
+            $_SESSION["user_ban"] = $row["Ban"];
             $_SESSION["highlight"] = 1;
 
             // echo "Login Successful. \r\n";

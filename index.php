@@ -181,7 +181,7 @@
                         <br><br>
 
                         <h3 style="font-size: 20px">Questionario Navideño</h3>
-                        <p>Una vez registrado podras modificar <b>casi</b> todos tus respuestas las veces que quieras.</p>
+                        <p>Una vez registrado podras modificar <b>casi</b> todos tus respuestas las veces que quieras. Por favor no uses emoticons.</p>
                         <br>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" name="reg_question_1">
