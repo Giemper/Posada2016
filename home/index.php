@@ -14,6 +14,8 @@
         $user_giftee = $_SESSION['user_giftee'];
         $user_cardee = $_SESSION['user_cardee'];
         $user_ban = $_SESSION['user_ban'];
+
+        $random = rand(0, 9);
 ***REMOVED***
 ***REMOVED***
 <html ng-app="posada">
@@ -109,6 +111,20 @@
                     </i>
                     <a class="extended" ng-click="tab.selectTab(6)">Admin</a>
                 </li>
+                ***REMOVED***
+                    if($random == 5) {
+                ***REMOVED***
+                <li>
+                    <i>
+                        <a ng-click="tab.selectTab(7)" >
+                            <img src="img/sanic.png" style="height: 32px; width: 34px; margin-left: -1px;">
+                        </a>
+                    </i>
+                    <a class="extended" ng-click="tab.selectTab(7)">Sonicfy</a>
+                </li>
+                ***REMOVED***
+                ***REMOVED***
+                ***REMOVED***
             </ul>
         </div>
         <div id="sidebar-bottom">
@@ -152,7 +168,7 @@
             <content-card></content-card>
         </div>
         ***REMOVED*** } ***REMOVED***
-        
+
         <div class="mdl-card" ng-show="tab.isSelected(4)">
             <!--<content-vote></content-vote>-->
         </div>
@@ -171,7 +187,12 @@
                 </div>
                 ***REMOVED***
         ***REMOVED***
+            if($random == 5) {
         ***REMOVED***
+            <div class="mdl-card" ng-show="tab.isSelected(7)">
+                <content-sanic></content-sanic>
+            </div>
+        ***REMOVED*** } ***REMOVED***
         
     </main>
 
@@ -209,6 +230,7 @@
                         <li style="display:none"><a data-dismiss="modal">Votaciones</a></li>
                         <li><a ng-click="tab.selectTab(5)" data-dismiss="modal">Perfil</a></li>
                         <li ng-show="admin == true"><a ng-click="tab.selectTab(6)" data-dismiss="modal">Admin</a></li>
+                        ***REMOVED*** if($random == 5) { ***REMOVED***<li><a ng-click="tab.selectTab(7)" data-dismiss="modal">Sonicfy</a></li>***REMOVED*** } ***REMOVED***
                         <li><a data-dismiss="modal" data-toggle="modal" data-target="#logout">Logout</a></li>
                     </ul>
                 </div>
@@ -231,5 +253,8 @@
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
     <script src="js/daily.js?a=***REMOVED*** echo rand(); ***REMOVED***"></script>
+    ***REMOVED*** if($random == 5) { ***REMOVED***
+        <script src="js/image.js"></script>
+    ***REMOVED*** } ***REMOVED***
 </body>
 </html>

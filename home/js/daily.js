@@ -32,15 +32,24 @@ app.controller('DailyVars', function ($scope) {
         $scope.image1 = "img/vote_genrykun.jpg"
 ***REMOVED***
     else if(dater("today") == dater("12/12/2016"))
-        $scope.question = "¿Quien puso una serpiente en mi bota?";
+        $scope.question = "Dia #12 - ¿Quien puso una serpiente en mi bota?";
     else if(dater("today") == dater("12/13/2016"))
-        $scope.question = "Are we Humans? Or are we _______ ?";
+        $scope.question = "Día #13 - Are we Humans? Or are we _______ ?";
     else if(dater("today") == dater("12/14/2016"))
-        $scope.question = "A little bit of Monica in my life. A little bit of Erica by my side. A little bit of Rita is all I need. A little bit of _______ imakes me your man.";
+        $scope.question = "Día #14 - A little bit of Monica in my life. A little bit of Erica by my side. A little bit of Rita is all I need. A little bit of ____________ makes me your man.";
     else if(dater("today") == dater("12/15/2016"))
-        $scope.question = "¿Quien de estos dos galanazos tiene la mejor posibilidad de actuar en la Pelicula Autobiografica del Dr. Gustavo Ortiz como el persona principal?";
+        $scope.question = "Día #15 - ¿Quien de estos dos galanazos tiene la mejor posibilidad de actuar en la Pelicula Autobiografica del Dr. Gustavo Ortiz como el personaje principal?";
     else if(dater("today") == dater("12/16/2016"))
-        $scope.question = "8 de Cada __________ prefieren Whiskas";
+        $scope.question = "Día #16 - ¿Quien sera elegido como el chambelan de Ruby en sus XV?";
+    else if(dater("today") == dater("12/17/2016"))
+        $scope.question = "Día #17 - 8 de Cada __________ prefieren Whiskas";
+    else if(dater("today") == dater("12/18/2016")) {
+        $scope.question = "Dia #18 - ¿Quien es el Discipulo favorito de todos los niños?";
+        $scope.team1 = "Trump";
+        $scope.image1 = "img/vote_trump.jpg";
+***REMOVED***
+    else if(dater("today") == dater("12/19/2016")) 
+        $scope.question = "Mirror, Mirror on the wall, Who's the fairest of them all?";
 });
 
 $('#directive-cards').on('click', '.votepad-div', function() {

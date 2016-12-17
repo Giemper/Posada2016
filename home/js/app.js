@@ -78,3 +78,10 @@ app.directive('contentAdmin', function () {
         templateUrl: 'directives/content-admin.php'
 ***REMOVED***
 });
+
+app.directive('contentSanic', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'directives/content-sanic.php'
+***REMOVED***
+});

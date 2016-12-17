@@ -100,10 +100,41 @@
 ***REMOVED***
 </style>
 
+***REMOVED***
+    $hector = rand(0, 9);
+
+    if($hector == 2) {
+        ***REMOVED***
+        <style>
+            #directive-cards .header-0-1 {
+                background: url('img/hector1.jpg') top / cover;
+        ***REMOVED***
+
+            #directive-cards .header-0 {
+                background: url('img/hector2.jpg') top / cover;
+        ***REMOVED***
+        </style>
+        ***REMOVED***
+***REMOVED***
+    else if ($hector == 8) {
+        ***REMOVED***
+        <style>
+            #directive-cards .header-0-1 {
+                background: url('img/hector3.jpg') center / cover;
+        ***REMOVED***
+
+            #directive-cards .header-0 {
+                background: url('img/hector4.jpg') top / cover;
+        ***REMOVED***
+        </style>
+        ***REMOVED***
+***REMOVED***
+***REMOVED***
+
 <header class="mdl-card">
     <div class="mdl-card__supporting-text">
         <h1>Bienvenido {{name}}!</h1>
-        <p>Hola hola. Gracias por registrarte, pronto sera el "match" para ambos intercambios. Hasta entonces, te invitamos a que explores la pagina, y que edites tu información para hacer mas claro tu perfil. Nos vemos el 30 de Diciembre.</p>
+        <p>Hola hola. Para los que decidieron entrar al Gran Intercambio, ya pueden checar a sus giftees. Dos opciones nuevas se activaron en su menu para poder ver las respuestas de tu giftee y poderles mandar mensajes anonimos! Para las personas que solamente estan participando en el intercambio de tarjetas, ya pronto se hara el match. Estate atento ;)</p>
     </div>
 </header>
 

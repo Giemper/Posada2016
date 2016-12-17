@@ -2,7 +2,14 @@
     #directive-cards .header-1 {
         background: url('img/header_santa.png') center / cover;
 ***REMOVED***
-
+    h1 {
+        font-size: 25px;
+        font-weight: bold;
+***REMOVED***
+    span.name {
+        font-size: 22px;
+        font-weight: bold;
+***REMOVED***
     h2 {
         font-size: 22px;
 ***REMOVED***
@@ -13,7 +20,8 @@
     <h2 class="mdl-card__title-text">Intercambio de Regalos</h2>
 </div>
 <div class="mdl-card__supporting-text" ng-controller="SantaVars">
-    <h1>Información de tu Giftee</h1>
+    <h1>Tu Giftee: </h1>
+    <span class="name">{{q[0]["FirstName"]}} {{q[0]["LastName"]}}</span>
     <hr style="margin: 16px 0">
 
     <h2>Platicame de ti</h2>

@@ -74,10 +74,12 @@ $(".sidebar-toggle").click(function () {
     $("#navbar").toggleClass("toggle");
 });
 
+var clicked = false;
 $("#directive-cards").on("click", "#gift-execute", function () {
     $(".gift-result").remove();
     $("#gift-execute").text("RESET");
 
+    match = [];
     var id = [];
     var blocked = [];
     var used = [];
@@ -126,16 +128,33 @@ $("#directive-cards").on("click", "#gift-execute", function () {
     ***REMOVED***
 ***REMOVED***
 
+    shuffle(match);
+    var random = Math.floor((Math.random() * 5) + 1);
     for(var i = 0; i < id.length; i++) {
         $('#gift-match').prepend('<h4 class="gift-result" style="font-weight:400; font-size: 14px;">' + mixer(match[i].santa) +' - ' + mixer(match[i].giftee) + '</h4>');
 ***REMOVED***
 
-    function mixer (number) {
-        return (((((number + 3) * 10) / 2) * 7) / 5) - 17;
+    function shuffle (a) {
+        var temp, rand;
+        for(var i = a.length; i; i--) {
+            rand = Math.floor(Math.random() * i);
+            temp = a[i - 1];
+            a[i - 1] = a[rand];
+            a[rand] = temp;
+    ***REMOVED***
 ***REMOVED***
 
-    $("#gift-execute").after('<button id="gift-submit" type="button" style="margin-left: 16px; color: white; background: #3696B5;" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Aceptar</button>');
+    function mixer (number) {
+        return ((number + 3) * 7) - random;
+***REMOVED***
 
+    // Add upload button
+    if(!clicked) {
+        clicked = true;
+        $("#gift-execute").after('<button id="gift-submit" type="button" style="margin-left: 16px; color: white; background: #3696B5;" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Aceptar</button>');
+***REMOVED***
+
+    // Upload to DB
     $("#gift-submit").click(function () {
         var santa = [];
         var giftee = [];
@@ -145,13 +164,14 @@ $("#directive-cards").on("click", "#gift-execute", function () {
     ***REMOVED***);
 
         var data = { 'santa': JSON.stringify(santa), 'giftee': JSON.stringify(giftee) }
-        console.log(data);
+        
         $.ajax({
             data: data,
             type: "post",
             url: "/home/php/match.php",
             success: function (data) {
-                // $("#gift-submit").after('<p style="color: rgb(139,195,74);">Oh shit! Ya se hizo el match!</p>');
+                $("#gift-submit").after('<p style="color: rgb(139,195,74);">Oh shit! Ya se hizo el match!</p>');
+                $("#gift-submit").remove();
                 console.log(data);
         ***REMOVED***
     ***REMOVED***);
@@ -164,9 +184,11 @@ app.controller('MainVars', function ($scope) {
 });
 
 app.controller('AsideVars', function ($scope) {
+    
     $scope.admin = truefalse(admin);
     $scope.Gift_Enable = true;
     $scope.Card_Enable = true;
+
 
     if(giftee === "-1" || inter === "0" || ban === "1")
         $scope.Gift_Enable = false;

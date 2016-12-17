@@ -144,7 +144,6 @@ p {
 #sidebar {
     width: 72px;
     min-height: 600px;
-    overflow-y: auto;
     background-color: #335052;
     position: fixed;
     top: 0;

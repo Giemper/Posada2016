@@ -6,10 +6,10 @@
         $type = $_POST['type'];
 
         if($type == "giftee") {
-            $sql = "SELECT q1, q2, q3, q4, q5, q6, q7, q8 FROM Questions WHERE ID=".$_SESSION['user_giftee'].";";
+            $sql = "SELECT FirstName, LastName, q1, q2, q3, q4, q5, q6, q7, q8 FROM Questions JOIN Santa ON Santa.ID = Questions.ID WHERE Santa.ID=".$_SESSION['user_giftee'].";";
     ***REMOVED***
         else if($type == "cardee") {
-            $sql = "SELECT q1, q2, q3, q4, q5, q6, q7, q8 FROM Questions WHERE ID=".$_SESSION['user_cardee'].";";
+            $sql = "SELECT FirstName, LastName, q1, q2, q3, q4, q5, q6, q7, q8 FROM Questions JOIN Santa On Santa.ID = Questions.ID WHERE Santa.ID=".$_SESSION['user_cardee'].";";
     ***REMOVED***
 
         

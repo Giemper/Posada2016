@@ -2,13 +2,25 @@
     #directive-cards .header-2 {
         background: url('img/header_card.png') center / cover;
 ***REMOVED***
+    h1 {
+        font-size: 25px;
+        font-weight: bold;
+***REMOVED***
+    p.name {
+        font-size: 22px;
+        font-weight: bold;
+***REMOVED***
+    h2 {
+        font-size: 22px;
+***REMOVED***
 </style>
 <div class="mdl-card__title header-2"></div>
 <div class="mdl-card__title header-title">
     <h2 class="mdl-card__title-text">Intercambio de Tarjetas</h2>
 </div>
 <div class="mdl-card__supporting-text" ng-controller="CardVars">
-    <h1>Información de tu Cardee</h1>
+    <h1>Tu Cardee: </h1>
+    <span class="name">{{q[0]["FirstName"]}} {{q[0]["LastName"]}}</span>
     <hr style="margin: 16px 0">
 
     <h2>Platicame de ti</h2>
