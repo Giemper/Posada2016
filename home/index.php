@@ -94,8 +94,7 @@
                 </li>
                 <li class="disable">
                     <i class="material-icons">
-                        <!--<a ng-click="tab.selectTab(4)">local_play</a>-->
-                        <a>local_play</a>
+                        <a ng-click="tab.selectTab(4)">local_play</a>
                     </i>
                     <a class="extended">Votaciones</a>
                 </li>
@@ -111,9 +110,7 @@
                     </i>
                     <a class="extended" ng-click="tab.selectTab(6)">Admin</a>
                 </li>
-                ***REMOVED***
-                    if($random == 5) {
-                ***REMOVED***
+                ***REMOVED*** if($random == 5) { ***REMOVED***
                 <li>
                     <i>
                         <a ng-click="tab.selectTab(7)" >
@@ -122,9 +119,7 @@
                     </i>
                     <a class="extended" ng-click="tab.selectTab(7)">Sonicfy</a>
                 </li>
-                ***REMOVED***
-                ***REMOVED***
-                ***REMOVED***
+                ***REMOVED*** } ***REMOVED***
             </ul>
         </div>
         <div id="sidebar-bottom">
@@ -170,7 +165,8 @@
         ***REMOVED*** } ***REMOVED***
 
         <div class="mdl-card" ng-show="tab.isSelected(4)">
-            <!--<content-vote></content-vote>-->
+            <content-vote></content-vote>
+            <input type="button" name="submit-vote" id="submit-vote" value="Ingresa Tus Votos!" style="width:100%;">
         </div>
 
         <div class="mdl-card" ng-show="tab.isSelected(5)">
@@ -251,7 +247,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?a=***REMOVED*** echo rand(); ***REMOVED***"></script>
+    <!--<script src="directives/vote.js"></script>-->
     <script src="js/daily.js?a=***REMOVED*** echo rand(); ***REMOVED***"></script>
     ***REMOVED*** if($random == 5) { ***REMOVED***
         <script src="js/image.js"></script>

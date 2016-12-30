@@ -55,7 +55,6 @@
         <div>
             <div id="users-repeat" ng-repeat="x in Users" class="mdl-row" style="display: flex" ng-hide="x.Inter == 0 && participant">
                 <h4 ng-class="{'disable' : x.Inter == 0 }" class="mdl-cell mdl-cell--5-col">{{x.ID}} - {{x.FirstName}} {{x.LastName}}</h4>
-                <!--<h4 class="mdl-cell mdl-cell--5-col">{{x.ID}} - {{x.FirstName}} {{x.LastName}}</h4>-->
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col" style="padding:0">
                     <input ng-disabled="x.Inter == 0" class="mdl-textfield__input" type="text" id="input_{{x.ID}}" name="input_{{x.ID}}" style="width:100%;" value="{{x.Blocked}}">
                 </div>
@@ -81,7 +80,7 @@
         <div class="mdl-card__title header-title">
             <h2 class="mdl-card__title-text">Match Tarjetas</h2>
         </div>
-        <div id="gift-match" class="mdl-card__supporting-text">
+        <div id="card-match" class="mdl-card__supporting-text">
             <button id="card-execute" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Executar</button>
         </div>
     </div>    

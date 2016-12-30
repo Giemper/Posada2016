@@ -6,7 +6,7 @@
         font-size: 25px;
         font-weight: bold;
 ***REMOVED***
-    p.name {
+    span.name {
         font-size: 22px;
         font-weight: bold;
 ***REMOVED***
@@ -14,6 +14,7 @@
         font-size: 22px;
 ***REMOVED***
 </style>
+
 <div class="mdl-card__title header-2"></div>
 <div class="mdl-card__title header-title">
     <h2 class="mdl-card__title-text">Intercambio de Tarjetas</h2>

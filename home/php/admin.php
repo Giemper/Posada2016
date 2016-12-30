@@ -3,7 +3,7 @@
     include_once 'connect.php';
 
     if($success) {
-        $sql = "SELECT ID, FirstName, LastName FROM Santa ORDER BY FirstName";
+        $sql = "SELECT ID, FirstName, LastName, Inter, Blocked, Ban, Giftee FROM Santa ORDER BY ID";
         $result = mysqli_query($con, $sql);
 
         $rows = array();

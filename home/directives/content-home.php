@@ -134,7 +134,7 @@
 <header class="mdl-card">
     <div class="mdl-card__supporting-text">
         <h1>Bienvenido {{name}}!</h1>
-        <p>Hola hola. Para los que decidieron entrar al Gran Intercambio, ya pueden checar a sus giftees. Dos opciones nuevas se activaron en su menu para poder ver las respuestas de tu giftee y poderles mandar mensajes anonimos! Para las personas que solamente estan participando en el intercambio de tarjetas, ya pronto se hara el match. Estate atento ;)</p>
+        <p>Hola hola. Oficialmente ya estan listos los resultados de ambos intercambios. ¿Ya sabes que le vas a regalar a tu Giftee (Si Estas participando)? ¿Ya sabes que le vas a escribir a tu Cardee (No te queda de otra)? En la semana se abriran las votaciones para los Discipulos Awards 2016. Han tardado un poco, pero no es mi culpa, es culpa de las series que estoy viendo ahorita.</p>
     </div>
 </header>
 
@@ -143,17 +143,17 @@
     <div class="mdl-card__title header-title">
         <h2 class="mdl-card__title-text">Encuesta Diaria</h2>
     </div>
-    <div class="mdl-card__supporting-text" style="margin-bottom:0">
-        <p><b>{{question}}</b></p>
+    <div id="question-text" class="mdl-card__supporting-text" style="margin-bottom:0">
+        <p id="question-angular"><b>{{question}}</b></p>
     </div>
     <div id="votepad">
-        <div class="mdl-card votepad-div" style="background-color:#8DB5D6; margin-right:5px" title="left">
+        <div class="mdl-card votepad-div left" style="background-color:#8DB5D6; margin-right:5px" title="left">
             <div class="votepad-circle">
                 <img src="{{image1}}" alt="">
             </div>
             <p class="votepad-team">#team{{team1}}</p>
         </div>
-        <div class="mdl-card votepad-div" style="background-color:#DB9C9C; margin-left:5px" title="right">
+        <div class="mdl-card votepad-div right" style="background-color:#DB9C9C; margin-left:5px" title="right">
             <div class="votepad-circle">
                 <img src="{{image2}}" alt="">
             </div>
