@@ -1,10 +1,10 @@
-***REMOVED***
+<?php
     session_start();
 
     if(isset($_SESSION['user_id']) != "") {
         header("Location: http://posada.giemper.com/home");
-***REMOVED***
-***REMOVED***
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -152,7 +152,7 @@
 
                     <h3 style="font-size: 20px">Crea tu Usuario</h3>
 
-                    <form id="form-register" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post" style="display: inline-table; width: 100%">
+                    <form id="form-register" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" style="display: inline-table; width: 100%">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" name="reg_user">
                             <label class="mdl-textfield__label" for="reg_user">Ingresa Usuario</label>
@@ -237,7 +237,7 @@
                 <h1 class="mdl-dialog__title">Login</h1>
 
                 <div class="mdl-dialog__content">
-                    <form id="form-login" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post">
+                    <form id="form-login" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input input-login" type="text" name="log_user" id="log_user">
                             <label class="mdl-textfield__label" for="log_user">Usuario</label>

@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
@@ -34,6 +34,6 @@
 
             mail($to, $subject, $message_body, $headers);
             echo '<p class="added" style="color: green">Correo enviado</p>';
-    ***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+?>

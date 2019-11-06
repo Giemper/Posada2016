@@ -1,14 +1,14 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
     $qArray = array("Platicame de Ti", "¿Que es lo que te disgusta?", "Series Favoritas", "Peliculas Favoritas", 
                     "Equipos Favoritos", "Musica Favorita", "¿Cual ha sido un buen recuerdo Navideño para ti?", "Si Fueras un <b>Meme</b>, ¿Cual serias?");
-***REMOVED***
+?>
 <style>
     #directive-cards .header-5 {
         background: url('img/header_edit.png') center / cover;
-***REMOVED***
+    }
 </style>
 <div class="mdl-card__title header-5"></div>
 <div class="mdl-card__title header-title">
@@ -16,9 +16,9 @@
 </div>
 <div class="mdl-card__supporting-text">
     <h1>Questionario Navideño</h1>
-    <form id="form-update" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post" class="mdl-grid">
+    <form id="form-update" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="mdl-grid">
 
-        ***REMOVED***
+        <?php
             if($success) {
                 $sql = "SELECT q.Q1, q.Q2, q.Q3, q.Q4, q.Q5, q.Q6, q.Q7, s.Inter FROM Questions q JOIN Santa s ON q.ID = s.ID WHERE q.ID = ". $_SESSION["user_id"] .";";
                 $result = mysqli_query($con, $sql);
@@ -32,30 +32,30 @@
                                 <label class="mdl-textfield__label" for="reg_question_'.($i + 1).'">'.$qArray[$i].'</label>
                                 <span class="mdl-textfield__error">Manten tu descripción menor a 255 carácteres.</span>
                             </div>';
-                ***REMOVED***
+                    }
                     if($row[7] == 1) {
                         $check = "checked";
-                ***REMOVED***
-                ***REMOVED***
+                    }
+                    else {
                         $check = "";
-                ***REMOVED***
+                    }
 
                     echo '<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="inter_switch">
                             <input type="checkbox" id="inter_switch" name="inter_switch" class="mdl-switch__input" '.$check.'>
                             <span class="mdl-switch__label">Quiero participar en el <b>Intercambio de Regalos</b>.</span>
                         </label>';
-            ***REMOVED***
-            ***REMOVED***
+                }
+                else {
                     echo '<p>Query: '.$sql.'</p><br>';
                     echo '<p style="color:red">Result: '.mysqli_num_rows($result).'</p>';
                     echo '<p style="color:red">Error: '.mysqli_error($con).'</p>';
-            ***REMOVED***
+                }
                 mysqli_close($con);
-        ***REMOVED***
-        ***REMOVED***
+            }
+            else {
                 echo '<p style="color:red">Error :)</p>';
                 mysqli_close($con);
-        ***REMOVED***
-        ***REMOVED***
+            }
+        ?>
     </form>
 </div>

@@ -1,17 +1,17 @@
 <style>
     #directive-cards .header-sanic {
         background: url('img/header_home.png') center / cover;
-***REMOVED***
+    }
 
     #sanic-panel {
         margin-left: auto;
         margin-right: auto;
         display: inline-block;
-***REMOVED***
+    }
 
     #sanic-panel img {
         width: 80%;
-***REMOVED***
+    }
 </style>
 <div class="mdl-card__title header-sanic"></div>
 <div class="mdl-card__title header-title">

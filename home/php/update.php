@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
@@ -14,10 +14,10 @@
 
         if($_POST['inter_switch'] == 'on') {
             $inter = 1;
-    ***REMOVED***
-    ***REMOVED***
+        }
+        else {
             $inter = 0;
-    ***REMOVED***
+        }
 
         mysqli_query($con, "START TRANSACTION");
         $Query_Santa = mysqli_query($con, "UPDATE Santa SET Inter = ". $inter ." WHERE ID = ".$_SESSION["user_id"].";");
@@ -26,15 +26,15 @@
         if($Query_Santa and $Query_Questions) {
             mysqli_query($con, "COMMIT");
             echo '<br><p style="color:green">Tus respuestas fueron exitosamente actualizadas!</p>';
-    ***REMOVED***
-    ***REMOVED***
+        }
+        else {
             mysqli_query($con, "ROLLBACK");
             echo '<br><p style="color: red">Error: ' .mysqli_error($con). '</p>';
-    ***REMOVED***
+        }
         mysqli_close($con);
-***REMOVED***
+    }
     else if (!isset($_REQUEST)) {
         mysqli_close($con);
         echo '<br><p style="color: red">Hubo un error con el servidor, intenta mas tarde.</p>';
-***REMOVED***
-***REMOVED***
+    }
+?>

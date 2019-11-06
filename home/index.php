@@ -1,11 +1,11 @@
-***REMOVED***
+<?php
     session_start();
 
     if(isset($_SESSION['user_id']) == "") {
         header("Location: http://posada.giemper.com");
-***REMOVED***
+    }
     
-***REMOVED***
+    else {
         $user_id = $_SESSION['user_id'];
         $user_name = $_SESSION['user_name'];
         $user_inter = $_SESSION['user_inter'];
@@ -16,8 +16,8 @@
         $user_ban = $_SESSION['user_ban'];
 
         $random = rand(0, 9);
-***REMOVED***
-***REMOVED***
+    }
+?>
 <html ng-app="posada">
 <head>
     <title>Posada Discípulos 2016</title>
@@ -110,7 +110,7 @@
                     </i>
                     <a class="extended" ng-click="tab.selectTab(6)">Admin</a>
                 </li>
-                ***REMOVED*** if($random == 5) { ***REMOVED***
+                <?php if($random == 5) { ?>
                 <li>
                     <i>
                         <a ng-click="tab.selectTab(7)" >
@@ -119,7 +119,7 @@
                     </i>
                     <a class="extended" ng-click="tab.selectTab(7)">Sonicfy</a>
                 </li>
-                ***REMOVED*** } ***REMOVED***
+                <?php } ?>
             </ul>
         </div>
         <div id="sidebar-bottom">
@@ -140,9 +140,9 @@
             <content-home></content-home>
         </div>
 
-        ***REMOVED*** 
+        <?php 
             if($user_giftee != -1) {
-        ***REMOVED***
+        ?>
 
         <div class="mdl-card" ng-show="tab.isSelected(1)">
             <content-santa></content-santa>
@@ -154,15 +154,15 @@
                 <button id="submit-message" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Enviar</button>
             </div>
         </div>
-        ***REMOVED*** } ***REMOVED***
+        <?php } ?>
 
-        ***REMOVED*** 
+        <?php 
             if($user_cardee != -1) {
-        ***REMOVED***
+        ?>
         <div class="mdl-card" ng-show="tab.isSelected(2)">
             <content-card></content-card>
         </div>
-        ***REMOVED*** } ***REMOVED***
+        <?php } ?>
 
         <div class="mdl-card" ng-show="tab.isSelected(4)">
             <content-vote></content-vote>
@@ -175,20 +175,20 @@
                 <button id="submit-update" type="button" style="color: white" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Update</button>
             </div>
         </div>
-        ***REMOVED*** 
+        <?php 
             if($user_admin == 1) {
-                ***REMOVED***
+                ?>
                 <div ng-show="tab.isSelected(6)">
                     <content-admin></content-admin>
                 </div>
-                ***REMOVED***
-        ***REMOVED***
+                <?php
+            }
             if($random == 5) {
-        ***REMOVED***
+        ?>
             <div class="mdl-card" ng-show="tab.isSelected(7)">
                 <content-sanic></content-sanic>
             </div>
-        ***REMOVED*** } ***REMOVED***
+        <?php } ?>
         
     </main>
 
@@ -226,7 +226,7 @@
                         <li style="display:none"><a data-dismiss="modal">Votaciones</a></li>
                         <li><a ng-click="tab.selectTab(5)" data-dismiss="modal">Perfil</a></li>
                         <li ng-show="admin == true"><a ng-click="tab.selectTab(6)" data-dismiss="modal">Admin</a></li>
-                        ***REMOVED*** if($random == 5) { ***REMOVED***<li><a ng-click="tab.selectTab(7)" data-dismiss="modal">Sonicfy</a></li>***REMOVED*** } ***REMOVED***
+                        <?php if($random == 5) { ?><li><a ng-click="tab.selectTab(7)" data-dismiss="modal">Sonicfy</a></li><?php } ?>
                         <li><a data-dismiss="modal" data-toggle="modal" data-target="#logout">Logout</a></li>
                     </ul>
                 </div>
@@ -235,23 +235,23 @@
     </section>
 
     <script>
-        var id = '***REMOVED*** echo $user_id; ***REMOVED***';
-        var name = '***REMOVED*** echo $user_name; ***REMOVED***';
-        var inter = '***REMOVED*** echo $user_inter; ***REMOVED***';
-        var admin = '***REMOVED*** echo $user_admin; ***REMOVED***';
-        var email = '***REMOVED*** echo $user_email; ***REMOVED***';
-        var giftee = '***REMOVED*** echo $user_giftee; ***REMOVED***';
-        var cardee = '***REMOVED*** echo $user_cardee; ***REMOVED***';
-        var ban = '***REMOVED*** echo $user_ban; ***REMOVED***';
+        var id = '<?php echo $user_id; ?>';
+        var name = '<?php echo $user_name; ?>';
+        var inter = '<?php echo $user_inter; ?>';
+        var admin = '<?php echo $user_admin; ?>';
+        var email = '<?php echo $user_email; ?>';
+        var giftee = '<?php echo $user_giftee; ?>';
+        var cardee = '<?php echo $user_cardee; ?>';
+        var ban = '<?php echo $user_ban; ?>';
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/main.js?a=***REMOVED*** echo rand(); ***REMOVED***"></script>
+    <script src="js/main.js?a=<?php echo rand(); ?>"></script>
     <!--<script src="directives/vote.js"></script>-->
-    <script src="js/daily.js?a=***REMOVED*** echo rand(); ***REMOVED***"></script>
-    ***REMOVED*** if($random == 5) { ***REMOVED***
+    <script src="js/daily.js?a=<?php echo rand(); ?>"></script>
+    <?php if($random == 5) { ?>
         <script src="js/image.js"></script>
-    ***REMOVED*** } ***REMOVED***
+    <?php } ?>
 </body>
 </html>

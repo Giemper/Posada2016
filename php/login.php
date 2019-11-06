@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
@@ -22,16 +22,16 @@
             $_SESSION["highlight"] = 1;
 
             // echo "Login Successful. \r\n";
-    ***REMOVED***
-    ***REMOVED***
+        }
+        else {
             // echo "Error: " .mysqli_error($con). "\r\n";
             echo '<p style="color: red">No existe Usuario/Contraseña. Intentalo otra vez, yo se que tu puedes.</p>';
-    ***REMOVED***
+        }
 
         mysqli_close($con);
-***REMOVED***
+    }
     else if (!isset($_GET)) {
         mysqli_close($con);
         echo '<p style="color: red">No hubo respuesta del Servidor. Intenta otra vez.</p>';
-***REMOVED***
-***REMOVED***
+    }
+?>

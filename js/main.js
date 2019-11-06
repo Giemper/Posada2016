@@ -21,15 +21,15 @@ $("#submit-register").click(function () {
         success: function (data) {
             if(data.length > 0) {
                 $("#register-echo").append(data);
-        ***REMOVED***
-        ***REMOVED***
+            }
+            else {
                 console.log("AJAX worked.");
                 $("#register").modal("toggle");
                 $("#success").modal("toggle");
                 $("input").val(null);
-        ***REMOVED***
-    ***REMOVED***
-***REMOVED***);
+            }
+        }
+    });
 });
 
 $("#submit-login").click(function () {
@@ -39,7 +39,7 @@ $("#submit-login").click(function () {
 $(".input-login").keypress(function (key) {
     if(key.which == 13) {
         Login();
-***REMOVED***
+    }
 });
 
 function Login () {
@@ -57,15 +57,15 @@ function Login () {
             success: function (data) {
                 if(data.length > 0) {
                     $("#login-echo").append(data);
-            ***REMOVED***
-            ***REMOVED***
+                }
+                else {
                     window.location.href = "/home/";
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***);
-***REMOVED***
+                }
+            }
+        });
+    }
 
-***REMOVED***
+    else {
         $("#error-login").text("Ingresa todos los datos por favor.")
-***REMOVED***
+    }
 }

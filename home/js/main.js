@@ -30,7 +30,7 @@ function shuffle(a) {
         temp = a[i - 1];
         a[i - 1] = a[rand];
         a[rand] = temp;
-***REMOVED***
+    }
 }
 
 function mixer(number) {
@@ -46,8 +46,8 @@ $("#submit-logout").click(function () {
         success: function (data) {
             console.log("Logout Sucessful.");
             window.location.href = "http://posada.giemper.com";
-    ***REMOVED***
-***REMOVED***);
+        }
+    });
 });
 
 $("#submit-message").click(function () {
@@ -61,8 +61,8 @@ $("#submit-message").click(function () {
         success: function (data) {
             console.log("Message Sent.");
             $("#form-message").append(data);
-    ***REMOVED***
-***REMOVED***);
+        }
+    });
     $("#message-text").val("");
 });
 
@@ -76,8 +76,8 @@ $("#submit-update").click(function () {
         success: function (data) {
             console.log("Update Sucessful.");
             $("#form-update").append(data);
-    ***REMOVED***
-***REMOVED***);
+        }
+    });
 });
 
 $("#submit-vote").click(function () {
@@ -86,7 +86,7 @@ $("#submit-vote").click(function () {
     var data = new Array(10);
     for (var i = 0; i < 10; i++) {
         data[i] = $('.vote-check.q-' + (i + 1) + ':checked').map(function () { return { "Category": this.title, "Vote": this.value } }).get();
-***REMOVED***
+    }
     var serial = data.serializeArray();
     console.log(serial);
 });
@@ -135,8 +135,8 @@ app.controller('UserVars', function ($scope) {
         url: "/home/php/users.php",
         success: function (data) {
             $scope.Users = $.parseJSON(data);
-    ***REMOVED***
-***REMOVED***);
+        }
+    });
 
     $("#directive-cards").on("click", ".vote-check", function () {
         var val = $(this).val();
@@ -155,30 +155,30 @@ app.controller('UserVars', function ($scope) {
                         if (!$(elem).prop('checked')) {
                             $(elem).parent().toggleClass("disable");
                             $(elem).prop('disabled', true);
-                    ***REMOVED***
-                ***REMOVED***);
+                        }
+                    });
                     $('html,body').animate({
                         scrollTop: $(".head-" + (num + 1)).offset().top - 80
-                ***REMOVED***,
+                    },
                         'slow');
-            ***REMOVED***
-            ***REMOVED***
+                }
+                else {
                     $('html,body').animate({
                         scrollTop: $(".head-" + num).offset().top - 80
-                ***REMOVED***,
+                    },
                         0);
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***
-    ***REMOVED***
+                }
+            }
+        }
+        else {
             if (check_count[title] == 3) {
                 $(".vote-option label." + title).find(".vote-check").each(function (index, elem) {
                     if ($(elem).prop('disabled')) {
                         $(elem).parent().toggleClass("disable");
                         $(elem).prop('disabled', false);
-                ***REMOVED***
-            ***REMOVED***);
-        ***REMOVED***
+                    }
+                });
+            }
 
             $(".vote-check.op-" + val).prop('disabled', false);
             $(".vote-option label.op-" + val).parent().show();
@@ -186,16 +186,16 @@ app.controller('UserVars', function ($scope) {
 
             $('html,body').animate({
                 scrollTop: $(".head-" + num).offset().top - 80
-        ***REMOVED***,
+            },
                 0);
 
             $(".vote-check.op-" + val).each(function (index, elem) {
                 if ($(elem).parent().hasClass("disable"))
                     $(elem).prop('disabled', true);
-        ***REMOVED***);
-    ***REMOVED***
+            });
+        }
 
-***REMOVED***);
+    });
 });
 
 app.controller('AdminVars', function ($scope) {
@@ -208,9 +208,9 @@ app.controller('AdminVars', function ($scope) {
             url: "/home/php/admin.php",
             success: function (data) {
                 $scope.Users = $.parseJSON(data);
-        ***REMOVED***
-    ***REMOVED***);
-***REMOVED***
+            }
+        });
+    }
 
     $("#users-list").on("click", ".admin-update", function () {
         var button = $(this);
@@ -225,13 +225,13 @@ app.controller('AdminVars', function ($scope) {
                 if (data === "oh oh") {
                     $("#button_" + ID).css("background-color", "#C43131");
                     $("#button_" + ID + " i").text("error");
-            ***REMOVED***
-            ***REMOVED***
+                }
+                else {
                     $("#button_" + ID + " i").text("done");
-            ***REMOVED***
-        ***REMOVED***
-    ***REMOVED***);
-***REMOVED***);
+                }
+            }
+        });
+    });
 
     var card_clicked = false;
     $("#directive-cards").on("click", "#card-execute", function () {
@@ -246,7 +246,7 @@ app.controller('AdminVars', function ($scope) {
         $scope.Users.forEach(function (e) {
             id.push(parseInt(e.ID));
             blocked.push(e.Giftee);
-    ***REMOVED***);
+        });
 
         for (var i = 0; i < id.length; i++) {
             var current_id = id[i];
@@ -271,30 +271,30 @@ app.controller('AdminVars', function ($scope) {
                 count++;
                 if (count > 100)
                     break;
-        ***REMOVED*** while (!go);
+            } while (!go);
 
             if (go) {
                 match[i].giftee = id[temp];
                 block[temp] = block[temp] + " " + id[temp];
                 used.push(temp);
-        ***REMOVED***
-        ***REMOVED***
+            }
+            else {
                 i = -1;
                 match = [];
                 used = [];
-        ***REMOVED***
-    ***REMOVED***
+            }
+        }
 
         shuffle(match);
         for (var i = 0; i < id.length; i++) {
             $('#card-match').prepend('<h4 class="card-result" style="font-weight:400; font-size: 14px;">' + mixer(match[i].santa) + ' - ' + mixer(match[i].giftee) + '</h4>');
-    ***REMOVED***
+        }
 
         // Add upload button
         if (!card_clicked) {
             card_clicked = true;
             $("#card-execute").after('<button id="card-submit" type="button" style="margin-left: 16px; color: white; background: #3696B5;" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Aceptar</button>');
-    ***REMOVED***
+        }
 
         // Upload to DB
         $("#card-submit").click(function () {
@@ -303,7 +303,7 @@ app.controller('AdminVars', function ($scope) {
             match.forEach(function (e) {
                 santa.push(e.santa);
                 giftee.push(e.giftee);
-        ***REMOVED***);
+            });
 
             var data = { 'santa': JSON.stringify(santa), 'cardee': JSON.stringify(giftee) }
 
@@ -315,10 +315,10 @@ app.controller('AdminVars', function ($scope) {
                     $("#card-submit").after('<p style="color: rgb(139,195,74);">Oh shit! Ya se hizo el match!</p>');
                     $("#card-submit").remove();
                     console.log(data);
-            ***REMOVED***
-        ***REMOVED***);
-    ***REMOVED***);
-***REMOVED***);
+                }
+            });
+        });
+    });
 
     var clicked = false;
     $("#directive-cards").on("click", "#gift-execute", function () {
@@ -334,8 +334,8 @@ app.controller('AdminVars', function ($scope) {
             if (e.Inter === "1" && e.Ban === "0") {
                 id.push(parseInt(e.ID));
                 blocked.push(e.Blocked);
-        ***REMOVED***
-    ***REMOVED***);
+            }
+        });
 
         for (var i = 0; i < id.length; i++) {
             var current_id = id[i];
@@ -360,30 +360,30 @@ app.controller('AdminVars', function ($scope) {
                 count++;
                 if (count > 100)
                     break;
-        ***REMOVED*** while (!go);
+            } while (!go);
 
             if (go) {
                 match[i].giftee = id[temp];
                 block[temp] = block[temp] + " " + id[temp];
                 used.push(temp);
-        ***REMOVED***
-        ***REMOVED***
+            }
+            else {
                 i = -1;
                 match = [];
                 used = [];
-        ***REMOVED***
-    ***REMOVED***
+            }
+        }
 
         shuffle(match);
         for (var i = 0; i < id.length; i++) {
             $('#gift-match').prepend('<h4 class="gift-result" style="font-weight:400; font-size: 14px;">' + mixer(match[i].santa) + ' - ' + mixer(match[i].giftee) + '</h4>');
-    ***REMOVED***
+        }
 
         // Add upload button
         if (!clicked) {
             clicked = true;
             $("#gift-execute").after('<button id="gift-submit" type="button" style="margin-left: 16px; color: white; background: #3696B5;" class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Aceptar</button>');
-    ***REMOVED***
+        }
 
         // Upload to DB
         $("#gift-submit").click(function () {
@@ -392,7 +392,7 @@ app.controller('AdminVars', function ($scope) {
             match.forEach(function (e) {
                 santa.push(e.santa);
                 giftee.push(e.giftee);
-        ***REMOVED***);
+            });
 
             var data = { 'santa': JSON.stringify(santa), 'giftee': JSON.stringify(giftee) }
 
@@ -404,10 +404,10 @@ app.controller('AdminVars', function ($scope) {
                     $("#gift-submit").after('<p style="color: rgb(139,195,74);">Oh shit! Ya se hizo el match!</p>');
                     $("#gift-submit").remove();
                     console.log(data);
-            ***REMOVED***
-        ***REMOVED***);
-    ***REMOVED***);
-***REMOVED***);
+                }
+            });
+        });
+    });
 });
 
 app.controller('SantaVars', function ($scope) {
@@ -418,8 +418,8 @@ app.controller('SantaVars', function ($scope) {
         url: "/home/php/santa.php",
         success: function (data) {
             $scope.q = $.parseJSON(data);
-    ***REMOVED***
-***REMOVED***);
+        }
+    });
 });
 
 app.controller('CardVars', function ($scope) {
@@ -429,6 +429,6 @@ app.controller('CardVars', function ($scope) {
         url: "/home/php/cardee.php",
         success: function (data) {
             $scope.q = $.parseJSON(data);
-    ***REMOVED***
-***REMOVED***);
+        }
+    });
 });

@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     session_unset();
-***REMOVED***
+?>

@@ -1,17 +1,17 @@
 <style>
     #directive-cards .header-6 {
         background: url('img/header_admin.png') center / cover;
-***REMOVED***
+    }
 
     #directive-cards .header-6-2 {
         background: url('img/header_santa.png') center / cover;
-***REMOVED***
+    }
     #directive-cards .header-6-3 {
         background: url('img/header_card.png') center / cover;
-***REMOVED***
+    }
     #directive-cards .header-6-4 {
         background: url('img/header_vote.png') center / cover;
-***REMOVED***
+    }
 
     .card-dock {
         width: 90%;
@@ -19,7 +19,7 @@
         margin-left: auto;
         margin-right: auto;
         display: flex;
-***REMOVED***
+    }
 
     .card-dock .mdl-card { width: 50%; }
     #directive-cards .card-dock .mdl-card.left { margin-right: 10px; }
@@ -32,12 +32,12 @@
         .card-dock {
             width: 100%;
             display: block;
-    ***REMOVED***
+        }
 
         .card-dock .mdl-card { width: 100%; }
         #directive-cards .card-dock .mdl-card.left { margin-right: 0; }
         #directive-cards .card-dock .mdl-card.right { margin-left: 0; }
-***REMOVED***
+    }
 
 </style>
 <div id="users-list" class="mdl-card">

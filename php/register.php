@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     include_once 'connect.php';
     $error = false;
 
@@ -22,35 +22,35 @@
         if($reg_pass != $reg_pass_2) {
             echo '<p style="color: red">Las contraseñas no coinciden.</p>';
             $error = true;
-    ***REMOVED***
+        }
 
         if($reg_user == '""' || $reg_user == '') {
             echo '<p style="color: red">Por favor ingresa tu usuario.</p>';
             $error = true;
-    ***REMOVED***
+        }
 
         if(strlen($reg_pass) < 8 || strlen($reg_pass_2) < 8) {
             echo '<p style="color: red">Por favor ingresa una contraseña valida mayor a 8 caracteres.</p>';
             $error = true;
-    ***REMOVED***
+        }
 
         if($reg_first == '' || $reg_last == '') {
             echo '<p style="color: red">Por favor ingresa tus nombres.</p>';
             $error = true;
-    ***REMOVED***
+        }
 
         if($reg_email == '') {
             echo '<p style="color: red">Por favor ingresa un correo valido.</p>';
             $error = true;
-    ***REMOVED***
+        }
         
         if(!$error) {
             if($_POST['inter_switch'] == 'on') {
                 $inter = 1;
-        ***REMOVED***
-        ***REMOVED***
+            }
+            else {
                 $inter = 0;
-        ***REMOVED***
+            }
 
             mysqli_query($con, "START TRANSACTION");
             $Query_Santa = mysqli_query($con, "INSERT INTO Santa (User, Pass, FirstName, LastName, Email, Inter) VALUES ('". $reg_user ."', '". $reg_pass ."', ". $reg_first .", ". $reg_last .", '". $reg_email ."', ". $inter .")");
@@ -81,15 +81,15 @@
                 $headers .= "From: Posada Discipulos 2016 <posada@giemper.com>" . "\r\n";
 
                 mail($reg_email, $subject, $message_body, $headers);
-        ***REMOVED***
-        ***REMOVED***
+            }
+            else {
                 mysqli_query($con, "ROLLBACK");
                 echo '<p style="color: red">Hubo un error al registrarse. Por favor revisa tu información.</p>';
-        ***REMOVED***
-    ***REMOVED***
+            }
+        }
         mysqli_close($con);
-***REMOVED***
+    }
     else if (!isset($_REQUEST)) {
         echo '<p style="color: red">Hubo un error con el servidor. Por favor intenta más tarde.</p>';
-***REMOVED***
-***REMOVED***
+    }
+?>

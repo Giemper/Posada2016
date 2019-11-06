@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
@@ -15,16 +15,16 @@
             if(!$query && !$error) {
                 $error = true;
                 echo 'Error: ' . mysqli_error($con) . '\r\n' . $i; 
-        ***REMOVED***
-    ***REMOVED***
+            }
+        }
 
         if(!$error) {
             mysqli_commit($con);
-    ***REMOVED***
-    ***REMOVED***
+        }
+        else {
             mysqli_rollback($con);
-    ***REMOVED***
+        }
 
         mysqli_close($con);
-***REMOVED***
-***REMOVED***
+    }
+?>

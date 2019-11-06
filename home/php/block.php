@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
@@ -10,7 +10,7 @@
 
         if(!$result) {
             echo "oh oh";  
-    ***REMOVED***
+        }
         mysqli_close($con);
-***REMOVED***
-***REMOVED***
+    }
+?>

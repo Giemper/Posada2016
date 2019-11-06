@@ -28,7 +28,7 @@ function getGoogle (query, api) {
         'num': '1',
         'searchType': 'image',
         'key': api
-***REMOVED***);
+    });
 
     // If there's a JSON response, it reads the received image link
     // and a small snippet of information of said image to be
@@ -36,13 +36,13 @@ function getGoogle (query, api) {
     $.getJSON(gImage, function (data) {
         imgURL = data.items[0].link;
         snippet = data.items[0].snippet;
-***REMOVED***)
+    })
     
     // always() will generate the content of the infowindow either way.
     .always(function() {
         var content = '<img src="'+ imgURL +'">';
         $("#sanic-panel").append(content);
-***REMOVED***);
+    });
 }
 
 getGoogle(name, apiKey);

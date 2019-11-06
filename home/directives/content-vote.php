@@ -1,31 +1,31 @@
 <style>
     #directive-cards .header-4 {
         background: url('img/header_vote.png') center / cover;
-***REMOVED***
+    }
 
     #vote-panel .vote-option {
         padding: 8px 20px;
         background-color: #f3f7f2;
         box-shadow: 0px 0px 15px #CACFD9;
-***REMOVED***
+    }
 
     #vote-panel .vote-option label.disable {
         opacity: 0.5;
-***REMOVED***
+    }
 
     #vote-option span {
         font-size: 13px;
-***REMOVED***
+    }
 
     #vote-panel h3 {
         padding-left: 0;
-***REMOVED***
+    }
 
     @media only screen and (max-width: 750px), screen and (max-height: 585px) {
         #vote-panel {
             width:95%;
-    ***REMOVED***
-***REMOVED***
+        }
+    }
 </style>
 <div class="mdl-card__title header-4"></div>
 <div class="mdl-card__title header-title">

@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
 
@@ -10,10 +10,10 @@
 
         if($result) {
             echo "Success";
-    ***REMOVED***
-    ***REMOVED***
+        }
+        else {
             echo '<br><p style="color: red">Error: ' .mysqli_error($con). '</p>';
-    ***REMOVED***
+        }
         mysqli_close($con);
-***REMOVED***
-***REMOVED***
+    }
+?>

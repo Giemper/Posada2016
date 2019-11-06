@@ -13,7 +13,7 @@ article {
 }
     section.modal {
         margin-bottom: 0;
-***REMOVED***
+    }
 
 h1,
 h2,
@@ -28,11 +28,11 @@ h4 {
     h1 {
         font-size: 30px;
         font-weight: bold;
-***REMOVED***
+    }
 
     h2 {
         font-size: 24px;
-***REMOVED***
+    }
 
 p {
     font-size: 18.5px;
@@ -55,7 +55,7 @@ p {
     #navbar.toggle {
         margin-left: 270px;
         transition: 0.3s;
-***REMOVED***
+    }
 
     #navbar h1{
         margin: 0;
@@ -64,67 +64,67 @@ p {
         font-size: 28px;
         font-weight: normal;
         text-decoration: none;
-***REMOVED***
+    }
 
     #navbar h1 a {
         text-decoration: none;
         color: #FFF;
-***REMOVED***
+    }
 
     #navbar ul,
     #nav-mobile-menu ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-***REMOVED***
+    }
 
     #navbar ul li {
         float: right; 
-***REMOVED***
+    }
 
     #nav-mobile {
         margin-top: -42px;
         padding: 0 15px;
         display: none;
-***REMOVED***
+    }
 
         #nav-mobile a,
         #nav-mobile .material-icons,
         #nav-mobile-menu .material-icons a {
             color: rgba(255, 255, 255, 1); 
             text-decoration: none;
-    ***REMOVED***
+        }
         #nav-mobile-menu .mdl-dialog {
             background-color: #335052;
             width: 56dp;
             max-width: 100%;
             height: 100%;
-    ***REMOVED***
+        }
             #nav-mobile-menu .mdl-dialog .shadow {
                 background-color: #335052;
                 min-height: 100%;
-        ***REMOVED***
+            }
 
             #nav-mobile-menu h4 a{
                 padding-top: 20px;
                 text-decoration: none;
                 color: white;
-        ***REMOVED***
+            }
 
             #nav-mobile-menu .material-icons {
                 margin: -95px 20px 0 0;
                 float: right;
                 font-size: 24px;
-        ***REMOVED***
+            }
 
             #nav-mobile-menu.fade {
                 animation-name: fadeleft;
                 animation-duration: 0.5s;
-        ***REMOVED***
+            }
 
             #nav-mobile-menu .mdl-dialog__content {
                 padding: 20px 0 24px 0;
-        ***REMOVED***
+            }
 
             #nav-mobile-menu ul li a {
                 display: inline-block;
@@ -138,7 +138,7 @@ p {
                 letter-spacing: 1.5px;
                 text-transform: uppercase;
                 cursor: pointer;
-        ***REMOVED***
+            }
 
 /* SIDEBAR */
 #sidebar {
@@ -160,12 +160,12 @@ p {
 }
     #sidebar .extended {
         display: none;
-***REMOVED***
+    }
 
     #sidebar.toggle {
         width: 270px;
         transition: 0.3s;
-***REMOVED***
+    }
 
     #sidebar.toggle .extended {
         display: flex;
@@ -173,14 +173,14 @@ p {
         padding: 22px 0 16px 24px;
         font-size: 22px;
         letter-spacing: 1.5px;
-***REMOVED***
+    }
 
     .toggle #sidebar-menu li,
     .toggle #sidebar-top li,
     .toggle #sidebar-bottom li {
         display: inline-flex;
         width: 100%;
-***REMOVED***
+    }
 
     #sidebar-menu ul,
     #sidebar-top ul,
@@ -188,7 +188,7 @@ p {
         list-style-type: none;
         margin: 0;
         padding: 0;
-***REMOVED***
+    }
 
     #sidebar-menu ul li a,
     #sidebar-top ul li a,
@@ -200,40 +200,40 @@ p {
         padding: 17px 0 16px 20px;
         font-size: 32px;
         text-decoration: none;
-***REMOVED***
+    }
 
     #sidebar-menu ul li,
     #sidebar-top ul li,
     #sidebar-bottom ul li {
         cursor: pointer;
-***REMOVED***
+    }
 
     #sidebar-menu ul li.disable a {
         cursor: default;
-***REMOVED***
+    }
 
     #sidebar-menu ul li:hover {
         background-color: rgba(0, 0, 0, 0.1);
-***REMOVED***
+    }
 
     #sidebar-menu ul li.disable a {
         color: #71888A;
         
-***REMOVED***
+    }
 
     #sidebar-menu ul li.disable:hover {
         background-color: #335052;
         cursor: default;
-***REMOVED***
+    }
 
     #sidebar-top li {
         background-color: #284142;
-***REMOVED***
+    }
 
     #sidebar-bottom {
         bottom: 0;
         position: fixed;
-***REMOVED***
+    }
 
 /* DIRECTIVE CARDS */
 #directive-cards {
@@ -244,12 +244,12 @@ p {
     #directive-cards.toggle {
         margin-left: 270px;
         transition: 0.3s;
-***REMOVED***
+    }
 
     #directive-cards h1 {
         font-weight: normal;
         margin-bottom: 10px;
-***REMOVED***
+    }
 
     #directive-cards .mdl-card {
         box-shadow: 0px 0px 15px #CACFD9;
@@ -259,29 +259,29 @@ p {
         margin-right: auto;
         margin-bottom: 30px;
         padding-bottom: 10px;
-***REMOVED***
+    }
 
     #directive-cards .mdl-card__title {
         color: #fff;
         height: 176px;
-***REMOVED***
+    }
 
     #directive-cards .mdl-card__title-text {
         font-weight: bold;
         font-size: 35px;
-***REMOVED***
+    }
 
     #directive-cards .mdl-card__supporting-text {
         color: rgba(0, 0, 0, 0.87);
         width: 90%;
         margin: 20px auto;
         padding: 0;
-***REMOVED***
+    }
 
     #directive-cards .header-title {
         background-color: rgba(35, 73, 38, 0.55);
         margin-top: -176px;
-***REMOVED***
+    }
 
 /* CLASSES */
 .content {
@@ -300,39 +300,39 @@ p {
 @media only screen and (max-width: 1250px) {
     p {
         font-size: 16px;
-***REMOVED***
+    }
 }
 
 @media only screen and (max-width: 750px), screen and (max-height: 585px) {
     #directive-cards {
         padding-top: 65px;
-***REMOVED***
+    }
 
     #directive-cards .mdl-card {
         width: 100%;
-***REMOVED***
+    }
 
     #navbar,
     #directive-cards,   
     #navbar.toggle,
     #directive-cards.toggle {
         margin-left: 0;
-***REMOVED***
+    }
 
     #navbar h1 {
         font-size: 20px;
         text-align: center;
         float: none;
         padding: 18px 0;
-***REMOVED***
+    }
     
     #nav-mobile {
         display: block;
-***REMOVED***
+    }
 
     #sidebar {
         display: none;
-***REMOVED***
+    }
 }
 
 #logout .mdl-dialog {
@@ -343,7 +343,7 @@ p {
 }
     #logout .mdl-dialog {
         max-width: 450px;
-***REMOVED***
+    }
 
 .fade {
     animation-name: fadedown;

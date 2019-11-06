@@ -1,4 +1,4 @@
-***REMOVED***
+<?php
     session_start();
     include_once 'connect.php';
     
@@ -11,32 +11,32 @@
     $result = mysqli_query($con, "SELECT Vote FROM Daily WHERE ID = ".$_SESSION['user_id']." AND DATE = '".$format."';");
     $vote = mysqli_num_rows($result);
     mysqli_close($con);
-***REMOVED***
+?>
 <style>
     #directive-cards .header-0 {
         background: url('img/header_home.png') center / cover;
-***REMOVED***
+    }
 
     #directive-cards .header-0-1 {
         background: url('img/header_home1.png') center / cover;
-***REMOVED***
+    }
     h3 {
         font-size: 20px;
         padding-left: 25px;
         padding-top: 3px;
-***REMOVED***
+    }
 
     #votepad {
         display: inline-flex; 
         padding: 10px 10px 0 10px; 
         height: 200px;
-***REMOVED***
+    }
 
     .votepad-div {
         min-height: 0;
         height: 100%;
         cursor: pointer;
-***REMOVED***
+    }
 
     .votepad-circle {
         width: 123px;
@@ -48,14 +48,14 @@
         border-width: 6px;
         border-color: white;
         margin: 12px auto 5px auto;
-***REMOVED***
+    }
 
     .votepad-div img {
         display: inline;
         margin: 0 auto;
         height: 100%;
         width: auto;
-***REMOVED***
+    }
 
     .votepad-team {
         color: white;
@@ -64,7 +64,7 @@
         margin: 10px 0 0 0;
         font-size: 25px;
         font-weight: bold;
-***REMOVED***
+    }
 
     .votepad-div img,
     .votepad-team {
@@ -74,62 +74,62 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-***REMOVED***
+    }
 
     .votepad-overlay {
         height: 220px;
         background-color: rgba(0,0,0,0.5);
         z-index: 5;
         margin-top: -210px;
-***REMOVED***
+    }
 
     .votepad-overlay p {
         color: white;
         text-align: center;
         font-size: 25px;
-***REMOVED***
+    }
 
     .off {
         display: none;
-***REMOVED***
+    }
     
     @media only screen and (max-width: 380px) {
         .votepad-team {
             font-size: 20px;
-    ***REMOVED***
-***REMOVED***
+        }
+    }
 </style>
 
-***REMOVED***
+<?php
     $hector = rand(0, 9);
 
     if($hector == 2) {
-        ***REMOVED***
+        ?>
         <style>
             #directive-cards .header-0-1 {
                 background: url('img/hector1.jpg') top / cover;
-        ***REMOVED***
+            }
 
             #directive-cards .header-0 {
                 background: url('img/hector2.jpg') top / cover;
-        ***REMOVED***
+            }
         </style>
-        ***REMOVED***
-***REMOVED***
+        <?php
+    }
     else if ($hector == 8) {
-        ***REMOVED***
+        ?>
         <style>
             #directive-cards .header-0-1 {
                 background: url('img/hector3.jpg') center / cover;
-        ***REMOVED***
+            }
 
             #directive-cards .header-0 {
                 background: url('img/hector4.jpg') top / cover;
-        ***REMOVED***
+            }
         </style>
-        ***REMOVED***
-***REMOVED***
-***REMOVED***
+        <?php
+    }
+?>
 
 <header class="mdl-card">
     <div class="mdl-card__supporting-text">
@@ -160,7 +160,7 @@
             <p class="votepad-team">#team{{team2}}</p>
         </div>
     </div>
-    <div class="votepad-overlay ***REMOVED*** if($vote == 0) { ***REMOVED***off***REMOVED*** } ***REMOVED***">
+    <div class="votepad-overlay <?php if($vote == 0) { ?>off<?php } ?>">
         <p style="margin-top: 60px;">¡Gracias por votar!</p>
         <p title="Mentira, siempre seran Genry y Vidal">Regresa mañana para una nueva pregunta con nuevos candidatos.</p>
     </div>

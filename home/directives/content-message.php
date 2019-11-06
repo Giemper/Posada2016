@@ -1,7 +1,7 @@
 <style>
     #directive-cards .header-3 {
         background: url('img/header_message.png') center / cover;
-***REMOVED***
+    }
 </style>
 <div class="mdl-card__title header-3"></div>
 <div class="mdl-card__title header-title">
@@ -12,7 +12,7 @@
     <p>Aqui puedes mandar mensajes anonimos a tu giftee. Dile y preguntale todo lo que quieras, los mensajes seran enviados a su correo electronico.
     Una vez que el haya recibido el correo, podra editar sus respuesta para ayudarte en tu busqueda del regalo perfecto.</p>
 
-    <form id="form-message" action="***REMOVED*** echo $_SERVER['PHP_SELF'];***REMOVED***" method="post" style="width:100%">
+    <form id="form-message" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" style="width:100%">
         <div class="mdl-textfield mdl-js-textfield" style="width:inherit">
             <textarea class="mdl-textfield__input" rows="5" id="message-text" name="message-text" style="width:inherit"></textarea>
             <label class="mdl-textfield__label" for="message-text">Escribe aqui tu correo...</label>

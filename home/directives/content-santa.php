@@ -1,18 +1,18 @@
 <style>
     #directive-cards .header-1 {
         background: url('img/header_santa.png') center / cover;
-***REMOVED***
+    }
     h1 {
         font-size: 25px;
         font-weight: bold;
-***REMOVED***
+    }
     span.name {
         font-size: 22px;
         font-weight: bold;
-***REMOVED***
+    }
     h2 {
         font-size: 22px;
-***REMOVED***
+    }
 </style>
 
 <div class="mdl-card__title header-1"></div>
